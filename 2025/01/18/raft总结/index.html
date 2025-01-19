@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2024/06/27/hello-world/"/>
+  <link rel="canonical" href="http://example.com/2025/01/18/raft总结/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,20 +34,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hello World - 缺省的梦境</title>
-  <meta name="keywords" content="null">
-  <meta desc name="description" content="缺省的梦境 - wizardTOT - 缺省的梦境">
+  <title>raft 总结 - 缺省的梦境</title>
+  <meta name="keywords" content="MIT6.824,null">
+  <meta desc name="description" content="这是 MIT6.824 课程 raft 论文阅读以及 lab2 总结贴 - wizardTOT - 缺省的梦境">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2024/06/27/hello-world/index.html">
+<meta property="og:title" content="raft 总结">
+<meta property="og:url" content="http://example.com/2025/01/18/raft%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="缺省的梦境">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="这是 MIT6.824 课程 raft 论文阅读以及 lab2 总结贴">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-06-27T11:40:32.268Z">
-<meta property="article:modified_time" content="2024-07-04T03:50:49.760Z">
+<meta property="article:published_time" content="2025-01-18T06:39:12.000Z">
+<meta property="article:modified_time" content="2025-01-19T06:51:59.157Z">
 <meta property="article:author" content="wizardTOT">
+<meta property="article:tag" content="MIT6.824">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2458,7 +2459,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/27/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/18/raft总结/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="缺省的梦境">
   </span>
@@ -2479,7 +2480,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Hello World
+        raft 总结
       </h1>
       <div class='new-meta-box'>
         
@@ -2496,14 +2497,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/MIT6-824/">MIT6.824</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/MIT6-824/" itemprop="url"><span itemprop="name">MIT6.824</span></a>
+      </span>
+    
+  </div>
+
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-06-27T19:40:32+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-01-18T14:39:12+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2024年6月27日</p>
+    <p>发布于：2025年1月18日</p>
   </a>
 </div>
 
@@ -2526,19 +2537,79 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <p>这是 MIT6.824 课程 raft 论文阅读以及 lab2 总结贴</p>
+<span id="more"></span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h1 id="论文总结"><a href="#论文总结" class="headerlink" title="论文总结"></a>论文总结</h1><p>论文原文：<a target="_blank" rel="noopener" href="http://nil.csail.mit.edu/6.824/2022/papers/raft-extended.pdf">http://nil.csail.mit.edu/6.824/2022/papers/raft-extended.pdf</a></p>
+<p>本篇论文是 MIT6.824 的第四篇论文，中间的那两篇有时间再补吧</p>
+<h2 id="论文背景"><a href="#论文背景" class="headerlink" title="论文背景"></a>论文背景</h2><p>文中说 raft 是一种相较于 paxos 更易理解的共识算法，但个人感觉论文与后面 lab 实现时还有不少地方需要自己思考或者search</p>
+<p>共识算法即让一个集群在可能出现故障情况下完成一项任务</p>
+<h2 id="复制状态机"><a href="#复制状态机" class="headerlink" title="复制状态机"></a>复制状态机</h2><p>提升容错的方法就是冗余，复制状态机就是用于解决容错性的问题。如图所示，复制状态机是一组机器的副本，包含机器状态和一系列log，顺序执行一致的log在没有故障时将得到相同的结果。</p>
+<p>raft算法就要保证复制 log 的一致性，这样即便一些副本出现故障，剩余副本的命令被正确复制，每个服务器的状态机就会按日志顺序处理它们，并将输出返回给客户端。</p>
+<p><img src="/./mappic/raft1.png" class="lazyload" data-srcset="/./mappic/raft1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"></p>
+<h2 id="raft共识算法"><a href="#raft共识算法" class="headerlink" title="raft共识算法"></a>raft共识算法</h2><p>raft 管理复制状态机，在副本中选择一个作为 leader，leader 与客户端交互，获得的 log 条目复制到其他的副本中，数据由 leader 流向客户端，当领导者故障时就会选取新的领导者。</p>
+<p><img src="/./mappic/raft2.png" class="lazyload" data-srcset="/./mappic/raft2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"></p>
+<h3 id="raft基本"><a href="#raft基本" class="headerlink" title="raft基本"></a>raft基本</h3><p>通常副本有三种状态：</p>
+<ul>
+<li>leader 处理客户端的请求，向所有状态机发送心跳，复制 entry 到状态机中。</li>
+<li>candidate leader 选举时的状态，当 leader 故障时成为 candidate 并收集选票。</li>
+<li>follower 被动响应请求，在 leader 超时时转换为 candidate</li>
+</ul>
+<p>三种状态有以下的转换关系<br><img src="/./mappic/raft3.png" class="lazyload" data-srcset="/./mappic/raft3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"></p>
+<p>时间被划分为任期 Term，每个 Term 开头是选举，没有选出 leader 则 Term 结束。</p>
+<p><img src="/./mappic/raft4.png" class="lazyload" data-srcset="/./mappic/raft4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"></p>
+<p>Term 用连续的整数编号。每个 Term 都以选举开始。Term 在 Raft 中充当逻辑时钟，允许服务器检测过时的信息。为此，每个服务器存储一个 CurrentTerm 变量，并在进行通信时交换该变量以保证一致性。一旦收到的消息中包含更新的 Term，服务器会将 CurrentTerm 更新为较大的那个，并转换为 Follwer。</p>
+<h3 id="leader选举"><a href="#leader选举" class="headerlink" title="leader选举"></a>leader选举</h3><p>触发 leader 选举的条件为当 leader 的 CurrentTerm 并非最大时（这是可能出现的情况），或者 leader 下线。</p>
+<p>raft 使用心跳机制来触发选举，leader 向其他 follower 发送心跳维护领导，即发送空的 AppendEntries RPC，这个 RPC 能维护 follower 的当前的状态并重置选举时间计时器，当 follower 在 ElectionTimeOut 内没有收到该 RPC 则转为 candidate 进行选举。</p>
+<p>这时在短时间一定有很多 follower 成为 candidate 触发选举，raft 设置随机的 ElectionTimeOut 来解决这个问题。</p>
+<p>过了随机 ElectionTimeOut 后 follower 要成为 candidate 并向其他 follower 发送 requestVote RPC，如果 follower 的 term 要高于 candidate 的 term 就不投票，若为投给别的 candidate 就比较 log ，如果 follower log 的 term 更新就不投票，如果 term 相等，有更新的 log 就不投票。</p>
+<p>选举时 candidate 会遇到以下情况：</p>
+<ol>
+<li>获得大多数 raft 的投票，转换为 leader 发送心跳维护领导。</li>
+<li>另一个 raft 当选 leader，会收到 AppendEntries RPC，如果 RPC 中 term &gt;&#x3D; CurrentTerm 就转换为 follower , 否则保持。</li>
+<li>出现分裂投票导致选举超时未成功，则重新开始选举，并且每个 raft 都要在随机时间进行。</li>
+</ol>
+<h3 id="日志复制"><a href="#日志复制" class="headerlink" title="日志复制"></a>日志复制</h3><p>在复制状态机里 log 组织方式如下，log 有 index 以及对应的 term, 给定 index 和 term 这个日志中的内容就是确定的，在所有的状态机中不会改变。</p>
+<p><img src="/./mappic/raft5.png" class="lazyload" data-srcset="/./mappic/raft5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"></p>
+<p>为保持 log 复制时的一致性，follower 要从 leader 中复制日志，正常情况下复制不会有什么问题，但当 leader 出现故障时就会出现各种不一致的情况，此时就要约束日志复制的过程。</p>
+<p><img src="/./mappic/raft6.png" class="lazyload" data-srcset="/./mappic/raft6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"></p>
+<p>日志复制的流程如下：</p>
+<p>leader 对其他的服务器会维护 nextIndex 以及 matchIndex，nextIndex 记录leader 将发送给 follower 的下一个 index，当首次当选 leader 时将所有的 nextIndex 初始化为最后一个 index 即可。</p>
+<p>leader 收到客户端中的命令作为 entry 写入新的日志项，向其他的服务器发送 AppendEntries RPC 复制日志，同时捎带 PrevLogIndex 和 PrevLogTerm。</p>
+<p>收到 RPC 后 follower 寻找 Index &#x3D;&#x3D; PrevLogIndex &amp;&amp; Term &#x3D;&#x3D; PrevLogTerm 的 entry，没有找到就拒绝，收到回复后 leader 就减少nextIndex 并重新发送 RPC，最终使 nextIndex 到达 leader 和 follower 匹配的位置。匹配方式可以进一步优化，拒绝 AppendEntries RPC 后 follower 可以发送冲突 entry 的 term 以及该 term 中第一个 index，这样 leader 便可以绕过该 term 中所有冲突的 entry。</p>
+<p>接受 AppendEntries RPC 后 follower 就需要删除冲突的 entry 并添加上 AppendEntries RPC 中的 entry ，这样便实现 log 的一致性。</p>
+<p>复制到大多数（和选举时类似） raft 的 entry 会标记为 committed，所有的 服务器都维护 commitIndex 记录，leader 会将 committed 的 entry 应用并将执行结果返回到客户端。</p>
+<p>一旦 Follwer 收到一个更大的 leadercommit，说明有新的 Entry 已提交，它会按序将其 Apply 于其本地。这里如果 leadercommit 如果大于 commitIndex，则 commitIndex 设置为 最后一个日志的 index 以及 leadercommit 中的最小值。</p>
+<h3 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h3><h4 id="选举约束"><a href="#选举约束" class="headerlink" title="选举约束"></a>选举约束</h4><p>上述限制还不足以应对 leader 故障后选举的情况，raft 保证 entry 仅从 leader 流向 follower ，而 leader 不会覆盖日志中的现有条目。</p>
+<p>因此选举时要增加约束，candidate 日志中最后一个 entry 应当比 follower 的最后一个 entry 更新，否则 follower 就会拒绝投票，这里的更新可以理解为 term 更大或者具有相同的 term 时 index 更大。</p>
+<h4 id="提交旧-entry"><a href="#提交旧-entry" class="headerlink" title="提交旧 entry"></a>提交旧 entry</h4><p>上面提到 entry 被复制到大多数服务器时就会被提交，但一个新 leader 是无法知道以前 term 已经复制到大多数服务器的 entry 是否被提交，下图所示的情况说明这一情形。</p>
+<p><img src="/./mappic/raft7.png" class="lazyload" data-srcset="/./mappic/raft7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"></p>
+<p>对于这个问题，raft 规定只提交当前 term 的 entry，不能提交旧 term 的 entry，这种方式让先前的 entry 被间解提交。</p>
+<p>此时上图中 c 情况下 term 2 的 entry 无法被 s1 提交，只有出现 e 情况下才能被间接提交，出现 d 中情况客户端会监测到 2 超时从而重新发送该 entry，即便覆盖也不会出现问题。</p>
+<h3 id="follower-和-candidate-故障"><a href="#follower-和-candidate-故障" class="headerlink" title="follower 和 candidate 故障"></a>follower 和 candidate 故障</h3><p>如果 follower 和 candidate 出现故障，则发送的 RequestVote 和 AppendEntries 将不会产生回复，raft 将无限期尝试处理失败，服务器重启后这些 RPC 将成功完成，如果接收到 RPC 后完成处理但在响应时故障，重启时会收到相同的 RPC ，服务器会忽略这些条目。</p>
+<h3 id="集群成员变更"><a href="#集群成员变更" class="headerlink" title="集群成员变更"></a>集群成员变更</h3><p>更改集群部分成员时，会出现集群分裂的情况，当然在同一个 term 内是不允许出现两个 leader 当选的。此时要做以下的联合共识的过程：</p>
+<ul>
+<li>entry 被复制两个配置中所有的服务器</li>
+<li>任何服务器都能充当 leader </li>
+<li>选举和提交的 entry 要来自新旧配置服务器中的大多数</li>
+</ul>
+<p>这样的联合共识可以保障切换配置时的安全性。</p>
+<h3 id="日志压缩"><a href="#日志压缩" class="headerlink" title="日志压缩"></a>日志压缩</h3><p>raft 使用快照机制来压缩日志信息</p>
+<p><img src="/./mappic/raft8.png" class="lazyload" data-srcset="/./mappic/raft8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"></p>
+<p>写入快照记录以下元数据：</p>
+<ul>
+<li>Last Included Index: 快照包含日志中最后一个 entry 的 index</li>
+<li>Last Included Term: 该 entry 的 term</li>
+</ul>
+<p>当 leader 建立快照丢弃了发送给 follower 的下一个 entry 时，需要使用 InstallSnapshot 的 RPC 将快照发送给 follower</p>
+<p><img src="/./mappic/raft9.png" class="lazyload" data-srcset="/./mappic/raft9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"></p>
+<p>当 follower 收到这个 RPC 时：</p>
+<ol>
+<li>如果 LastIncludedIndex &gt;&#x3D; follower 最后一个 entry 的 index 时，则 follower 就丢弃日志，并覆盖快照</li>
+<li>相反覆盖的 entry 就丢弃，快照后的条目有效就保留</li>
+</ol>
+<p>何时写入快照？</p>
+<p>写快照必然会花费大量时间，可以等到日志达到一定大小后就建立快照，还有可以使用 COW 技术，在不影响写入快照时更新日志。</p>
 
   </div>
   
@@ -2563,10 +2634,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-04T11:50:49+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-19T14:51:59+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年7月4日</p>
+    <p>更新于：2025年1月19日</p>
   </a>
 </div>
 
@@ -2574,6 +2645,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MIT6-824/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>MIT6.824</p></a></div>
+  <span hidden itemprop="keywords">MIT6.824</span>
+
 
         
       
@@ -2585,7 +2660,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/06/27/hello-world/&title=Hello World - 缺省的梦境&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2025/01/18/raft%E6%80%BB%E7%BB%93/&title=raft 总结 - 缺省的梦境&summary=这是 MIT6.824 课程 raft 论文阅读以及 lab2 总结贴"
           
           >
           
@@ -2597,7 +2672,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/06/27/hello-world/&title=Hello World - 缺省的梦境&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2025/01/18/raft%E6%80%BB%E7%BB%93/&title=raft 总结 - 缺省的梦境&summary=这是 MIT6.824 课程 raft 论文阅读以及 lab2 总结贴"
           
           >
           
@@ -2609,7 +2684,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/06/27/hello-world/&title=Hello World - 缺省的梦境&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2025/01/18/raft%E6%80%BB%E7%BB%93/&title=raft 总结 - 缺省的梦境&summary=这是 MIT6.824 课程 raft 论文阅读以及 lab2 总结贴"
           
           >
           
@@ -2642,14 +2717,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/06/29/%E8%A5%BF%E7%94%B5%E8%AE%A1%E7%BB%84%E5%AE%9E%E9%AA%8C%E6%94%BB%E7%95%A5/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>西电计组实验攻略</p>
-          <p class='content'>西电计科大二计算机组成与体系结构实验
-
-
-关于实验大二下学期鄙人确实被计科的实验安排恶心到了。这些实验不难，但非常占用时间，学期末实验成绩也不错，为了造福以后的学妹学弟，特此将实验报告放底下，可...</p>
-        </a>
       
+        <a class='next' href='/2025/01/18/%E8%A5%BF%E7%94%B5%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E6%94%BB%E7%95%A5/'>
+          <p class='title'>西电操作系统实验攻略<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>西电计科大二操作系统实验（非软工李航OS课设）
+
+
+计科的 OS 实验很水，意思意思前几个就行，用不着全部做完
+实验报告实验题目一实验内容实验 1 创建进程
+学会通过基本的 Windows 或者...</p>
+        </a>
       
     </div>
   
@@ -2664,7 +2741,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/06/27/hello-world/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2025/01/18/raft%E6%80%BB%E7%BB%93/index.html#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -2706,7 +2783,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BA%E6%96%87%E8%83%8C%E6%99%AF"><span class="toc-text">论文背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E7%8A%B6%E6%80%81%E6%9C%BA"><span class="toc-text">复制状态机</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#raft%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95"><span class="toc-text">raft共识算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#raft%E5%9F%BA%E6%9C%AC"><span class="toc-text">raft基本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#leader%E9%80%89%E4%B8%BE"><span class="toc-text">leader选举</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E5%A4%8D%E5%88%B6"><span class="toc-text">日志复制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-text">安全性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%89%E4%B8%BE%E7%BA%A6%E6%9D%9F"><span class="toc-text">选举约束</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E4%BA%A4%E6%97%A7-entry"><span class="toc-text">提交旧 entry</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#follower-%E5%92%8C-candidate-%E6%95%85%E9%9A%9C"><span class="toc-text">follower 和 candidate 故障</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%86%E7%BE%A4%E6%88%90%E5%91%98%E5%8F%98%E6%9B%B4"><span class="toc-text">集群成员变更</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E5%8E%8B%E7%BC%A9"><span class="toc-text">日志压缩</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3243,7 +3320,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"缺省的梦境","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"缺省的梦境"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/06/27/hello-world/","name":"Hello World"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"缺省的梦境","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"缺省的梦境","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hello World","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/06/27/hello-world/"},"author":{"@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"缺省的梦境","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/06/27/hello-world/","wordCount":0,"datePublished":"2024-06-27T11:40:32.268Z","dateModified":"2024-07-04T03:50:49.760Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"缺省的梦境","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"缺省的梦境"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/MIT6-824/","name":"MIT6.824"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2025/01/18/raft总结/","name":"raft 总结"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"缺省的梦境","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"缺省的梦境","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"raft 总结","description":"这是 MIT6.824 课程 raft 论文阅读以及 lab2 总结贴","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2025/01/18/raft%E6%80%BB%E7%BB%93/"},"author":{"@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"缺省的梦境","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2025/01/18/raft%E6%80%BB%E7%BB%93/","wordCount":35,"datePublished":"2025-01-18T06:39:12.000Z","dateModified":"2025-01-19T06:51:59.157Z","articleSection":"MIT6.824","keywords":"MIT6.824","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

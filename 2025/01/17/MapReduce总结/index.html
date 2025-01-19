@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2024/06/27/hello-world/"/>
+  <link rel="canonical" href="http://example.com/2025/01/17/mapreduce总结/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,20 +34,21 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>Hello World - 缺省的梦境</title>
-  <meta name="keywords" content="null">
-  <meta desc name="description" content="缺省的梦境 - wizardTOT - 缺省的梦境">
+  <title>MapReduce总结 - 缺省的梦境</title>
+  <meta name="keywords" content="MIT6.824,null">
+  <meta desc name="description" content="开个新坑，这是mit6.824分布式系统的总结帖，方便自己复习。第一篇论文就是来自 Google 的 MapReduce，本篇总结帖包含简单的论文阅读和lab1算法实现。 - wizardTOT - 缺省的梦境">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2024/06/27/hello-world/index.html">
+<meta property="og:title" content="MapReduce总结">
+<meta property="og:url" content="http://example.com/2025/01/17/MapReduce%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="缺省的梦境">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="开个新坑，这是mit6.824分布式系统的总结帖，方便自己复习。第一篇论文就是来自 Google 的 MapReduce，本篇总结帖包含简单的论文阅读和lab1算法实现。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-06-27T11:40:32.268Z">
-<meta property="article:modified_time" content="2024-07-04T03:50:49.760Z">
+<meta property="article:published_time" content="2025-01-17T03:25:21.000Z">
+<meta property="article:modified_time" content="2025-01-18T04:48:29.234Z">
 <meta property="article:author" content="wizardTOT">
+<meta property="article:tag" content="MIT6.824">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2458,7 +2459,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/27/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/17/MapReduce总结/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="缺省的梦境">
   </span>
@@ -2479,7 +2480,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        Hello World
+        MapReduce总结
       </h1>
       <div class='new-meta-box'>
         
@@ -2496,14 +2497,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/MIT6-824/">MIT6.824</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/MIT6-824/" itemprop="url"><span itemprop="name">MIT6.824</span></a>
+      </span>
+    
+  </div>
+
 
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-06-27T19:40:32+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-01-17T11:25:21+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2024年6月27日</p>
+    <p>发布于：2025年1月17日</p>
   </a>
 </div>
 
@@ -2526,19 +2537,67 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <p>开个新坑，这是mit6.824分布式系统的总结帖，方便自己复习。第一篇论文就是来自 Google 的 MapReduce，本篇总结帖包含简单的论文阅读和lab1算法实现。</p>
+<span id="more"></span>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h1 id="论文总结"><a href="#论文总结" class="headerlink" title="论文总结"></a>论文总结</h1><p>论文原文<br><a target="_blank" rel="noopener" href="https://pdos.csail.mit.edu/6.824/papers/mapreduce.pdf">https://pdos.csail.mit.edu/6.824/papers/mapreduce.pdf</a></p>
+<h2 id="论文背景"><a href="#论文背景" class="headerlink" title="论文背景"></a>论文背景</h2><p>编写特定功能的分布式软件处理大规模的数据比较费时，能否设计一种分布式框架使得普通工程师也可以很容易的完成并运行大规模的分布式运算，在这种想法下 MapReduce 应运而生。</p>
+<p>MapReduce 的想法来自于函数式编程语言中的 map 和 reduce ，用户仅需编写适当的 map 和 reduce 函数即可通过 MapReduce 接口轻松完成对大规模任务的并行计算。</p>
+<h2 id="MapReduce基本机制"><a href="#MapReduce基本机制" class="headerlink" title="MapReduce基本机制"></a>MapReduce基本机制</h2><p><img src="/./mappic/map1.png" class="lazyload" data-srcset="/./mappic/map1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"></p>
+<p>首先输入的文件将分为 M 个 split 对应 map 任务的数量，然后会在集群上启动多个副本。</p>
+<p>其中一个特殊的副本被称为 master，剩余的副本为 worker 由 master 管理并分配任务，总共由 M 个 map 任务以及 R 个 reduce 任务，master监测任务执行状态。</p>
+<p>Map 阶段，map Worker 从 split 文件中解析 K&#x2F;V 对，传递给 <code>map</code> 函数执行，生成中间 K&#x2F;V 对缓存在内存中，缓存的中间 K&#x2F;V 对会定期写入的 worker 的磁盘。本地磁盘将分区函数划分为 R 个区域，磁盘的位置将通过 master 传递给 reduce worker。</p>
+<p>进入 Reduce 阶段，reduce worker 会通过 RPC 调用访问 map worker 的本地缓存，读取完所有的中间数据后会排序，相同的键会分在一起。迭代排序结果，对于每一个唯一的中间键，会将 K&#x2F;V 传给 <code>reduce</code> 函数执行，<code>reduce</code> 函数将输出 append 到对应分区的最终文件中。</p>
+<p>所有的 Map 任务和 Reduce 任务完成后，最终一致的结果（R 个分区文件）将返回给应用程序。通常 MapReduce 框架无需合并，这些结果文件会传送到下一个 MapReduce 或者能处理分块文件的分布式应用。</p>
+<p>Master 会保存所有任务的状态(<code>idle</code>,<code>in-progress</code>,<code>completed</code>)并监控，分配给所有 worker 执行的任务，以及由 map 任务生成的 R 个中间文件的位置、大小。当 map 任务完成后更新的位置信息将递增推送个 reduce worker。</p>
+<h2 id="容错性"><a href="#容错性" class="headerlink" title="容错性"></a>容错性</h2><p>MapReduce 的容错性由以下方面保证</p>
+<h3 id="Worker-故障"><a href="#Worker-故障" class="headerlink" title="Worker 故障"></a>Worker 故障</h3><p>Master 会定期 ping 每一个 worker，如果 worker 超时将会标记为<code>failed</code>。此时将会进行以下处理：</p>
+<ol>
+<li>对于 <code>completed</code> 即已完成的 map 任务，将会标记为 idle 并分配给其他可执行的 worker，对于 <code>in-progress</code> 的map和reduce 任务同样进行以上处理。</li>
+<li>对于 <code>completed</code> 的 reduce 任务，并不需要 Redo 由于存储到全局文件系统中。</li>
+<li>当一个 map 任务因 WorkerA 失败转而由 WorkerB 执行，所有 reduce Worker 会收到重新执行的通知，任何尚未从 Worker A 读取数据的 reduce 任务将从 Worker B 读取数据。</li>
+</ol>
+<h3 id="Master-故障"><a href="#Master-故障" class="headerlink" title="Master 故障"></a>Master 故障</h3><p>Master 故障可以通过 checkpoint 恢复或者重新执行 MapReduce 解决。</p>
+<h3 id="故障时的语义"><a href="#故障时的语义" class="headerlink" title="故障时的语义"></a>故障时的语义</h3><p>当提供的函数是输入值的确定性函数时（即对相同的输入值会得到相同的结果），MapReduce 保正并发执行时结果与顺序执行一致。论文中称使用一种名为原子提交机制 Atomic Commits 实现。</p>
+<ul>
+<li>Map 任务的输出处理：每个正在进行的 map 任务会将其输出写到私有临时文件中。一个map任务会产生R个这样的文件，当 map 任务完成时，Worker 通知 Master，并在消息中包含 R 个临时文件的名称。当 Master 收到一个 map 任务首次完成消息时，它将那 R 个文件名保存在 Master 数据结构中</li>
+<li>Reduce 任务的输出处理：当reduce任务完成时，reduce 的 worker 会原子性地将其临时输出文件重命名为最终输出文件。</li>
+</ul>
+<h2 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h2><h3 id="备份worker"><a href="#备份worker" class="headerlink" title="备份worker"></a>备份worker</h3><p>落后的worker 会降低 MapReduce 的性能，当 MapReduce 操作接近完成时，master 可以通过备份 worker 安排给仍在 <code>in-progress</code> 的任务，只要有一个 worker 完成该任务即标记为 <code>completed</code>。</p>
+<h3 id="任务粒度"><a href="#任务粒度" class="headerlink" title="任务粒度"></a>任务粒度</h3><p>将 map 阶段分为 M 个部分，将 reduce 任务分为 R 个部分，M 和 R 应当远大于 worker 的数量，可以使得负载平衡并且更坏恢复失败的任务。但实际中 M 和 R 的大小有限制，由于 master 要在 O(M+R) 次调度中保持 O(M*R) 种状态，此外 R 的数量还要受到用户程序的限制。</p>
+<h3 id="定制函数"><a href="#定制函数" class="headerlink" title="定制函数"></a>定制函数</h3><p>在 partition 时可以通过用户指定的哈希函数实现指定的功能，并且也可以在执行 reduce 前指定 combiner 函数先进行一轮合并再发送。</p>
+<h1 id="lab1算法实现"><a href="#lab1算法实现" class="headerlink" title="lab1算法实现"></a>lab1算法实现</h1><p>lab1 无论是实现还是 debug 相比于后面的 lab 不过是些许风霜了。与论文的鸿沟不大。</p>
+<h2 id="coordinator"><a href="#coordinator" class="headerlink" title="coordinator"></a>coordinator</h2><p>coordinator 就是论文中的master，要实现的基本功能有：</p>
+<ul>
+<li>记录任务相关的信息</li>
+<li>响应 worker 对任务的请求</li>
+<li>监测任务执行的状态</li>
+</ul>
+<p>我定义的 coordinator 结构体如下, 其中 mutex 是 coordinator 的锁，会涉及多个 worker 的并发请求，cond 是控制任务分配的条件变量。</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Coordinator <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="comment">// Your definitions here.</span></span><br><span class="line">	mutex           sync.Mutex</span><br><span class="line">	cond            *sync.Cond</span><br><span class="line">	nMap            <span class="type">int</span></span><br><span class="line">	nReduce         <span class="type">int</span></span><br><span class="line">	MapTasks        []*Task</span><br><span class="line">	ReduceTasks     []*Task</span><br><span class="line">	mapPhaseDone    <span class="type">bool</span></span><br><span class="line">	reducePhaseDone <span class="type">bool</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>遍历任务列表寻找没有执行的任务分配任务给 worker ，如果没有则设置条件变量等待有空闲任务，lab中要求等待所有的 map 完成后才能分配 reduce 任务，这样实现就简单很多。 </p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *Coordinator)</span></span> PollTask(args *TaskArgs, reply *Task) <span class="type">error</span> &#123;</span><br><span class="line">	c.mutex.Lock()</span><br><span class="line">	<span class="keyword">defer</span> c.mutex.Unlock()</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> c.MapPhaseDone() &#123;</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> _, task := <span class="keyword">range</span> c.MapTasks &#123;</span><br><span class="line">			<span class="keyword">if</span> task.TaskState == Waiting &#123;</span><br><span class="line">				*reply = *task</span><br><span class="line">				c.TaskBegin(task)</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		c.cond.Wait()</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> c.ReducePhaseDone() &#123;</span><br><span class="line">			<span class="keyword">break</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span> _, task := <span class="keyword">range</span> c.ReduceTasks &#123;</span><br><span class="line">			<span class="keyword">if</span> task.TaskState == Waiting &#123;</span><br><span class="line">				*reply = *task</span><br><span class="line">				c.TaskBegin(task)</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		c.cond.Wait()</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p><code>TaskBegin</code>监测任务执行，对每一个正在执行的任务开一个线程，若10s中任务未完成就设置为 Waiting 状态交给其他的 worker 执行，这样就无需心跳机制。</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *Coordinator)</span></span> TaskBegin(task *Task) &#123;</span><br><span class="line">	task.TaskState = Working</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">(task *Task)</span></span> &#123;</span><br><span class="line">		timedue := time.After(<span class="number">10</span> * time.Second)</span><br><span class="line">		&lt;-timedue</span><br><span class="line">		c.mutex.Lock()</span><br><span class="line">		<span class="keyword">defer</span> c.mutex.Unlock()</span><br><span class="line">		<span class="keyword">if</span> task.TaskState == Working &#123;</span><br><span class="line">			<span class="keyword">if</span> task.TaskType == MapTask &#123;</span><br><span class="line">				log.Printf(<span class="string">&quot;Recover the map task %d&quot;</span>, task.TaskID)</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> task.TaskType == ReduceTask &#123;</span><br><span class="line">				log.Printf(<span class="string">&quot;Recover the reduce task %d&quot;</span>, task.TaskID)</span><br><span class="line">			&#125;</span><br><span class="line">			task.TaskState = Waiting</span><br><span class="line">			c.cond.Broadcast()</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;(task)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>任务执行完后 worker 要及时通过 RPC 更新状态。</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *Coordinator)</span></span> TaskDone(args *TaskDoneArgs, reply *TaskDoneReply) <span class="type">error</span> &#123;</span><br><span class="line">	c.mutex.Lock()</span><br><span class="line">	<span class="keyword">defer</span> c.mutex.Unlock()</span><br><span class="line">	<span class="keyword">if</span> args.TaskType == MapTask &#123;</span><br><span class="line">		c.MapTasks[args.TaskID].TaskState = Done</span><br><span class="line">		<span class="keyword">if</span> c.MapPhaseDone() &#123;</span><br><span class="line">			c.cond.Broadcast()</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> args.TaskType == ReduceTask &#123;</span><br><span class="line">		c.ReduceTasks[args.TaskID].TaskState = Done</span><br><span class="line">		<span class="keyword">if</span> c.ReducePhaseDone() &#123;</span><br><span class="line">			c.cond.Broadcast()</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>剩余具体的任务执行完成检查仅需遍历任务列表，记得上锁即可。</p>
+<h2 id="RPC"><a href="#RPC" class="headerlink" title="RPC"></a>RPC</h2><p>在 RPC 中我们需要定义一些 coordinator 与 worker 之间通信变量，有关任务的状态，任务的类型。</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Task <span class="keyword">struct</span> &#123;</span><br><span class="line">	TaskID    <span class="type">int</span></span><br><span class="line">	Nreduce   <span class="type">int</span></span><br><span class="line">	Nmap      <span class="type">int</span></span><br><span class="line">	FileName  <span class="type">string</span></span><br><span class="line">	TaskType  TaskType</span><br><span class="line">	TaskState TaskState</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> TaskArgs <span class="keyword">struct</span>&#123;&#125;</span><br><span class="line"><span class="keyword">type</span> TaskType <span class="type">int</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	MapTask TaskType = <span class="literal">iota</span></span><br><span class="line">	ReduceTask</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> TaskState <span class="type">int</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	Working TaskState = <span class="literal">iota</span></span><br><span class="line">	Waiting</span><br><span class="line">	Done</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> TaskDoneArgs <span class="keyword">struct</span> &#123;</span><br><span class="line">	TaskID   <span class="type">int</span></span><br><span class="line">	TaskType TaskType</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> TaskDoneReply <span class="keyword">struct</span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Worker"><a href="#Worker" class="headerlink" title="Worker"></a>Worker</h2><p>与论文中分配任务稍有不同，Worker 执行时需要不断Pull 空闲的任务然后执行对应的操作。Worker 主要的流程就是获得任务，根据任务类型执行 map 函数或者 reduce 函数，执行完成后将更改任务状态。</p>
+<p>具体实现通过 RPC 调用 Coordinator 中已经实现的接口。</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">CallTask</span><span class="params">()</span></span> (*Task, <span class="type">bool</span>) &#123;</span><br><span class="line">	args := TaskArgs&#123;&#125;</span><br><span class="line">	reply := Task&#123;&#125;</span><br><span class="line">	ok := call(<span class="string">&quot;Coordinator.PollTask&quot;</span>, &amp;args, &amp;reply)</span><br><span class="line">	<span class="keyword">return</span> &amp;reply, ok</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">CallTaskDone</span><span class="params">(taskID <span class="type">int</span>, taskType TaskType)</span></span> (*TaskDoneReply, <span class="type">bool</span>) &#123;</span><br><span class="line">	args := TaskDoneArgs&#123;</span><br><span class="line">		TaskID:   taskID,</span><br><span class="line">		TaskType: taskType,</span><br><span class="line">	&#125;</span><br><span class="line">	reply := TaskDoneReply&#123;&#125;</span><br><span class="line">	ok := call(<span class="string">&quot;Coordinator.TaskDone&quot;</span>, &amp;args, &amp;reply)</span><br><span class="line">	<span class="keyword">return</span> &amp;reply, ok</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对于 Map 任务，对文件执行完 <code>mapFunc</code> 后，创建类型为 <code>[][]KeyValue</code> 的kvmap进行存储，根据 reduce 的数量将键值分配，将 kvmap 编码后写入名为mr-%d-%d的文件中，第一个代表任务id，第二个代表 reduce 划分。</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">DoMapTask</span><span class="params">(task *Task, mapFunc <span class="keyword">func</span>(<span class="type">string</span>, <span class="type">string</span>)</span></span> []KeyValue) &#123;</span><br><span class="line">	file, err := os.Open(task.FileName)</span><br><span class="line">	<span class="comment">//fmt.Printf(&quot;Task %d open file %s\n&quot;, task.TaskID, task.FileName)</span></span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatalf(<span class="string">&quot;Maptask %d cannot open %v&quot;</span>, task.TaskID, task.FileName)</span><br><span class="line">	&#125;</span><br><span class="line">	content, err := io.ReadAll(file)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatalf(<span class="string">&quot;cannot read %v&quot;</span>, task.FileName)</span><br><span class="line">	&#125;</span><br><span class="line">	file.Close()</span><br><span class="line">	kva := mapFunc(task.FileName, <span class="type">string</span>(content))</span><br><span class="line">	kvmap := <span class="built_in">make</span>([][]KeyValue, task.Nreduce)</span><br><span class="line">	<span class="keyword">for</span> _, kv := <span class="keyword">range</span> kva &#123;</span><br><span class="line">		i := ihash(kv.Key) % task.Nreduce</span><br><span class="line">		kvmap[i] = <span class="built_in">append</span>(kvmap[i], kv)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> i, ikva := <span class="keyword">range</span> kvmap &#123;</span><br><span class="line">		intermediateName := fmt.Sprintf(<span class="string">&quot;mr-%d-%d.m&quot;</span>, task.TaskID, i)</span><br><span class="line">		tmpfile, err := os.CreateTemp(<span class="string">&quot;./&quot;</span>, <span class="string">&quot;mr-*.tmp&quot;</span>)</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			log.Fatal(<span class="string">&quot;Can&#x27;t create&quot;</span>)</span><br><span class="line">		&#125;</span><br><span class="line">		encoder := json.NewEncoder(tmpfile)</span><br><span class="line">		<span class="keyword">for</span> _, kv := <span class="keyword">range</span> ikva &#123;</span><br><span class="line">			encoder.Encode(kv)</span><br><span class="line">		&#125;</span><br><span class="line">		tmpfile.Close()</span><br><span class="line">		os.Rename(tmpfile.Name(), intermediateName)</span><br><span class="line">		<span class="comment">// fmt.Printf(&quot;MapTask %d create file %s\n&quot;, task.TaskID, intermediateName)</span></span><br><span class="line">	&#125;</span><br><span class="line">	CallTaskDone(task.TaskID, task.TaskType)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>执行reduce任务，读取中间文件，将所有的键值对按照键排序，将相同键的值通过 <code>reduceFunc</code> 进行处理，结果写入 mr-out-%d 中。</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">DoReduceTask</span><span class="params">(task *Task, reduceFunc <span class="keyword">func</span>(<span class="type">string</span>, []<span class="type">string</span>)</span></span> <span class="type">string</span>) &#123;</span><br><span class="line">	intermediate := []KeyValue&#123;&#125;</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; task.Nmap; i++ &#123;</span><br><span class="line">		intermediateName := fmt.Sprintf(<span class="string">&quot;mr-%d-%d.m&quot;</span>, i, task.TaskID)</span><br><span class="line">		file, err := os.Open(intermediateName)</span><br><span class="line">		<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">			log.Fatalf(<span class="string">&quot;Can&#x27;t open file %v&quot;</span>, intermediate)</span><br><span class="line">		&#125;</span><br><span class="line">		decoder := json.NewDecoder(file)</span><br><span class="line">		<span class="keyword">for</span> &#123;</span><br><span class="line">			<span class="keyword">var</span> kv KeyValue</span><br><span class="line">			<span class="keyword">if</span> err := decoder.Decode(&amp;kv); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				<span class="keyword">if</span> err == io.EOF &#123;</span><br><span class="line">					<span class="keyword">break</span></span><br><span class="line">				&#125;</span><br><span class="line">				log.Fatalf(<span class="string">&quot;Can&#x27;t decode %v&quot;</span>, intermediateName)</span><br><span class="line">			&#125;</span><br><span class="line">			intermediate = <span class="built_in">append</span>(intermediate, kv)</span><br><span class="line">		&#125;</span><br><span class="line">		file.Close()</span><br><span class="line">	&#125;</span><br><span class="line">	sort.Sort(ByKey(intermediate))</span><br><span class="line">	<span class="comment">//fmt.Printf(&quot;%v\n&quot;, intermediate)</span></span><br><span class="line">	outputFileName := fmt.Sprintf(<span class="string">&quot;mr-out-%d&quot;</span>, task.TaskID)</span><br><span class="line">	tmpfile, err := os.CreateTemp(<span class="string">&quot;./&quot;</span>, <span class="string">&quot;mr-*.tmp&quot;</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(<span class="string">&quot;Can&#x27;t create&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">	i := <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> i &lt; <span class="built_in">len</span>(intermediate) &#123;</span><br><span class="line">		j := i + <span class="number">1</span></span><br><span class="line">		<span class="keyword">for</span> j &lt; <span class="built_in">len</span>(intermediate) &amp;&amp; intermediate[j].Key == intermediate[i].Key &#123;</span><br><span class="line">			j++</span><br><span class="line">		&#125;</span><br><span class="line">		values := []<span class="type">string</span>&#123;&#125;</span><br><span class="line">		<span class="keyword">for</span> k := i; k &lt; j; k++ &#123;</span><br><span class="line">			values = <span class="built_in">append</span>(values, intermediate[k].Value)</span><br><span class="line">		&#125;</span><br><span class="line">		output := reduceFunc(intermediate[i].Key, values)</span><br><span class="line">		fmt.Fprintf(tmpfile, <span class="string">&quot;%v %v\n&quot;</span>, intermediate[i].Key, output)</span><br><span class="line">		i = j</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	tmpfile.Close()</span><br><span class="line">	os.Rename(tmpfile.Name(), outputFileName)</span><br><span class="line">	<span class="comment">// fmt.Printf(&quot;ReduceTask %d create file %s \n&quot;, task.TaskID, outputFileName)</span></span><br><span class="line">	CallTaskDone(task.TaskID, task.TaskType)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>关于debug，总体而言这个 lab 基本不会有活锁或者不一致的问题考虑，注意锁的使用即可。</p>
 
   </div>
   
@@ -2563,10 +2622,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-04T11:50:49+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-01-18T12:48:29+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年7月4日</p>
+    <p>更新于：2025年1月18日</p>
   </a>
 </div>
 
@@ -2574,6 +2633,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/MIT6-824/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>MIT6.824</p></a></div>
+  <span hidden itemprop="keywords">MIT6.824</span>
+
 
         
       
@@ -2585,7 +2648,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/06/27/hello-world/&title=Hello World - 缺省的梦境&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2025/01/17/MapReduce%E6%80%BB%E7%BB%93/&title=MapReduce总结 - 缺省的梦境&summary=开个新坑，这是mit6.824分布式系统的总结帖，方便自己复习。第一篇论文就是来自 Google 的 MapReduce，本篇总结帖包含简单的论文阅读和lab1算法实现。"
           
           >
           
@@ -2597,7 +2660,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/06/27/hello-world/&title=Hello World - 缺省的梦境&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2025/01/17/MapReduce%E6%80%BB%E7%BB%93/&title=MapReduce总结 - 缺省的梦境&summary=开个新坑，这是mit6.824分布式系统的总结帖，方便自己复习。第一篇论文就是来自 Google 的 MapReduce，本篇总结帖包含简单的论文阅读和lab1算法实现。"
           
           >
           
@@ -2609,7 +2672,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/06/27/hello-world/&title=Hello World - 缺省的梦境&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2025/01/17/MapReduce%E6%80%BB%E7%BB%93/&title=MapReduce总结 - 缺省的梦境&summary=开个新坑，这是mit6.824分布式系统的总结帖，方便自己复习。第一篇论文就是来自 Google 的 MapReduce，本篇总结帖包含简单的论文阅读和lab1算法实现。"
           
           >
           
@@ -2642,14 +2705,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/06/29/%E8%A5%BF%E7%94%B5%E8%AE%A1%E7%BB%84%E5%AE%9E%E9%AA%8C%E6%94%BB%E7%95%A5/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>西电计组实验攻略</p>
-          <p class='content'>西电计科大二计算机组成与体系结构实验
+        <a class='prev' href='/2025/01/18/%E8%A5%BF%E7%94%B5%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AE%9E%E9%AA%8C%E6%94%BB%E7%95%A5/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>西电操作系统实验攻略</p>
+          <p class='content'>西电计科大二操作系统实验（非软工李航OS课设）
 
 
-关于实验大二下学期鄙人确实被计科的实验安排恶心到了。这些实验不难，但非常占用时间，学期末实验成绩也不错，为了造福以后的学妹学弟，特此将实验报告放底下，可...</p>
+计科的 OS 实验很水，意思意思前几个就行，用不着全部做完
+实验报告实验题目一实验内容实验 1 创建进程
+学会通过基本的 Windows 或者...</p>
         </a>
       
+      
+        <a class='next' href='/2024/07/06/PA0-1/'>
+          <p class='title'>PA0-1<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>The machine is always right!
+Every line of untested code is always wrong. 
+
+
+PA1快来玩呀https://jyywi...</p>
+        </a>
       
     </div>
   
@@ -2664,7 +2738,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/06/27/hello-world/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2025/01/17/MapReduce%E6%80%BB%E7%BB%93/index.html#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -2706,7 +2780,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BA%E6%96%87%E8%83%8C%E6%99%AF"><span class="toc-text">论文背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MapReduce%E5%9F%BA%E6%9C%AC%E6%9C%BA%E5%88%B6"><span class="toc-text">MapReduce基本机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%B9%E9%94%99%E6%80%A7"><span class="toc-text">容错性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Worker-%E6%95%85%E9%9A%9C"><span class="toc-text">Worker 故障</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Master-%E6%95%85%E9%9A%9C"><span class="toc-text">Master 故障</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%85%E9%9A%9C%E6%97%B6%E7%9A%84%E8%AF%AD%E4%B9%89"><span class="toc-text">故障时的语义</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="toc-text">性能优化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E4%BB%BDworker"><span class="toc-text">备份worker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%BB%E5%8A%A1%E7%B2%92%E5%BA%A6"><span class="toc-text">任务粒度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E5%88%B6%E5%87%BD%E6%95%B0"><span class="toc-text">定制函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#coordinator"><span class="toc-text">coordinator</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RPC"><span class="toc-text">RPC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Worker"><span class="toc-text">Worker</span></a></li></ol>
     </div>
   </section>
 
@@ -3243,7 +3317,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"缺省的梦境","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"缺省的梦境"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/06/27/hello-world/","name":"Hello World"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"缺省的梦境","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"缺省的梦境","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hello World","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/06/27/hello-world/"},"author":{"@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"缺省的梦境","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/06/27/hello-world/","wordCount":0,"datePublished":"2024-06-27T11:40:32.268Z","dateModified":"2024-07-04T03:50:49.760Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"缺省的梦境","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"缺省的梦境"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/MIT6-824/","name":"MIT6.824"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2025/01/17/MapReduce总结/","name":"MapReduce总结"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"缺省的梦境","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"缺省的梦境","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"MapReduce总结","description":"开个新坑，这是mit6.824分布式系统的总结帖，方便自己复习。第一篇论文就是来自 Google 的 MapReduce，本篇总结帖包含简单的论文阅读和lab1算法实现。","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2025/01/17/MapReduce%E6%80%BB%E7%BB%93/"},"author":{"@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"缺省的梦境","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2025/01/17/MapReduce%E6%80%BB%E7%BB%93/","wordCount":85,"datePublished":"2025-01-17T03:25:21.000Z","dateModified":"2025-01-18T04:48:29.234Z","articleSection":"MIT6.824","keywords":"MIT6.824","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
