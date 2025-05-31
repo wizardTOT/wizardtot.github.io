@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://wizardtot.github.io/2025/02/23/tinykv中场总结1/"/>
+  <link rel="canonical" href="https://wizardtot.github.io/2025/04/28/ceph论文阅读/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,22 +34,20 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>TinyKV project 1 and project 2A - 缺省的梦境</title>
-  <meta name="keywords" content="TinyKV,null">
-  <meta desc name="description" content="这是 TinyKV 的 project 1 和 project 2 总结贴，细致的线性测试很友好
-可能有些模糊的地方，当然这些是给自己复习看的 - wizardTOT - 缺省的梦境">
+  <title>缺省的梦境</title>
+  <meta name="keywords" content="null">
+  <meta desc name="description" content="缺省的梦境 - wizardTOT - 缺省的梦境">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="TinyKV project 1 and project 2A">
-<meta property="og:url" content="https://wizardtot.github.io/2025/02/23/TinyKV%E4%B8%AD%E5%9C%BA%E6%80%BB%E7%BB%931/index.html">
+<meta property="og:title" content="缺省的梦境">
+<meta property="og:url" content="https://wizardtot.github.io/2025/04/28/ceph%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/index.html">
 <meta property="og:site_name" content="缺省的梦境">
-<meta property="og:description" content="这是 TinyKV 的 project 1 和 project 2 总结贴，细致的线性测试很友好 可能有些模糊的地方，当然这些是给自己复习看的">
+<meta property="og:description" content="ceph论文阅读论文原文 https:&#x2F;&#x2F;www3.nd.edu&#x2F;~dthain&#x2F;courses&#x2F;cse40771&#x2F;spring2007&#x2F;papers&#x2F;ceph.pdf ceph，一种为OSD设计的分布式文件系统，目标：  使元数据与数据管理分离，使元数据工作负载分布式处理 提升系统的可扩展性  Overviewceph包含三部分：客户端接口，OSD集群和元数据集群。总体上具有以下特点：  数据与">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2025-02-23T06:39:12.000Z">
-<meta property="article:modified_time" content="2025-05-31T08:15:08.873Z">
+<meta property="article:published_time" content="2025-04-28T15:13:44.905Z">
+<meta property="article:modified_time" content="2025-04-30T07:50:28.491Z">
 <meta property="article:author" content="wizardTOT">
-<meta property="article:tag" content="TinyKV">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2460,7 +2458,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://wizardtot.github.io/2025/02/23/TinyKV中场总结1/">
+  <link itemprop="mainEntityOfPage" href="https://wizardtot.github.io/2025/04/28/ceph论文阅读/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="缺省的梦境">
   </span>
@@ -2480,240 +2478,62 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <h1 class="title" itemprop="name headline">
-        TinyKV project 1 and project 2A
-      </h1>
-      <div class='new-meta-box'>
+      <span hidden itemprop="name headline">
         
-          
-            
-<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="" rel="nofollow">
-    <img itemprop="image" src="https://avatars.githubusercontent.com/u/108916782?s=400&u=e846b7214f176468b34f789eb796d8ad8771ecad&v=4" class="lazyload" data-srcset="https://avatars.githubusercontent.com/u/108916782?s=400&u=e846b7214f176468b34f789eb796d8ad8771ecad&v=4" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">WizardTOT</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-  <div class='new-meta-item category'>
-    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/TinyKV/">TinyKV</a>
-    
-      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/TinyKV/" itemprop="url"><span itemprop="name">TinyKV</span></a>
       </span>
-    
-  </div>
-
-
-          
-        
-          
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-02-23T14:39:12+08:00">
-  <a class='notlink'>
-    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2025年2月23日</p>
-  </a>
-</div>
-
-          
-        
-          
-            
-
-
-
-          
-        
-        <!-- Custom Files topMeta begin-->
-        
-        <!-- Custom Files topMeta end-->
-      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>这是 TinyKV 的 project 1 和 project 2 总结贴，细致的线性测试很友好</p>
-<p>可能有些模糊的地方，当然这些是给自己复习看的</p>
-<span id="more"></span>
-
-<p>TinyKV project 原链接：<a target="_blank" rel="noopener" href="https://github.com/talent-plan/tinykv">https://github.com/talent-plan/tinykv</a></p>
-<h2 id="Project1-StandaloneKV"><a href="#Project1-StandaloneKV" class="headerlink" title="Project1 StandaloneKV"></a>Project1 StandaloneKV</h2><p>通过 project1 熟悉 TinyKV 的底层。要求基于 bagerDB 实现单节点的存储引擎，并且支持列族(column family)。与后续的 raft 部分并没有太多关联，但可以让我们对底层的存储窥见一二。</p>
-<h3 id="Column-Family"><a href="#Column-Family" class="headerlink" title="Column Family"></a>Column Family</h3><p>bagerDB 自身并不支持 CF，普通的 key-value 存储是无法处理关系式事务的，所以通过 CF 的形式，将列名作为键的前缀构成一个新键，一个列构成一个列族。</p>
-<p>在 engine_util.go 中可以看出 CF 的存储方式。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">KeyWithCF</span><span class="params">(cf <span class="type">string</span>, key []<span class="type">byte</span>)</span></span> []<span class="type">byte</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">append</span>([]<span class="type">byte</span>(cf+<span class="string">&quot;_&quot;</span>), key...)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">GetCF</span><span class="params">(db *badger.DB, cf <span class="type">string</span>, key []<span class="type">byte</span>)</span></span> (val []<span class="type">byte</span>, err <span class="type">error</span>) &#123;</span><br><span class="line">	err = db.View(<span class="function"><span class="keyword">func</span><span class="params">(txn *badger.Txn)</span></span> <span class="type">error</span> &#123;</span><br><span class="line">		val, err = GetCFFromTxn(txn, cf, key)</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	&#125;)</span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">GetCFFromTxn</span><span class="params">(txn *badger.Txn, cf <span class="type">string</span>, key []<span class="type">byte</span>)</span></span> (val []<span class="type">byte</span>, err <span class="type">error</span>) &#123;</span><br><span class="line">	item, err := txn.Get(KeyWithCF(cf, key))</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span>, err</span><br><span class="line">	&#125;</span><br><span class="line">	val, err = item.ValueCopy(val)</span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Project1A"><a href="#Project1A" class="headerlink" title="Project1A"></a>Project1A</h3><p>在 1A 中实现 standAloneStorage 的初始化以及以下接口：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Storage <span class="keyword">interface</span> &#123;</span><br><span class="line">	Start() <span class="type">error</span></span><br><span class="line">	Stop() <span class="type">error</span></span><br><span class="line">	Write(ctx *kvrpcpb.Context, batch []Modify) <span class="type">error</span></span><br><span class="line">	Reader(ctx *kvrpcpb.Context) (StorageReader, <span class="type">error</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> StorageReader <span class="keyword">interface</span> &#123;</span><br><span class="line">	<span class="comment">// When the key doesn&#x27;t exist, return nil for the value</span></span><br><span class="line">	GetCF(cf <span class="type">string</span>, key []<span class="type">byte</span>) ([]<span class="type">byte</span>, <span class="type">error</span>)</span><br><span class="line">	IterCF(cf <span class="type">string</span>) engine_util.DBIterator</span><br><span class="line">	Close()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>定义 storage 要包含 engine，engine 包含两个 bager 数据库，一个用于存放 kv ，另一个用于存放 raft 日志及信息。同时初始化 storage 还需要路径信息，从 config 参数中获取即可。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Engines <span class="keyword">struct</span> &#123;</span><br><span class="line">	Kv     *badger.DB</span><br><span class="line">	KvPath <span class="type">string</span></span><br><span class="line">	<span class="comment">// Metadata used by Raft.</span></span><br><span class="line">	Raft     *badger.DB</span><br><span class="line">	RaftPath <span class="type">string</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>实现 reader 方法时要返回一个 StorageReader 接口，接口中三个函数也要实现，分别代表获取 CF_key 对应的 value，返回一个迭代器，关闭 reader 。 在实现时要开启一个事务，然后调用engine_util 中封装好的函数就行了。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *StandAloneStorageReader)</span></span> GetCF(cf <span class="type">string</span>, key []<span class="type">byte</span>) ([]<span class="type">byte</span>, <span class="type">error</span>) &#123;</span><br><span class="line">	val, err := engine_util.GetCFFromTxn(r.txn, cf, key)</span><br><span class="line">	<span class="keyword">if</span> err == badger.ErrKeyNotFound &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span>, <span class="literal">nil</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> val, err</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *StandAloneStorageReader)</span></span> IterCF(cf <span class="type">string</span>) engine_util.DBIterator &#123;</span><br><span class="line">	iter := engine_util.NewCFIterator(cf, r.txn)</span><br><span class="line">	<span class="keyword">return</span> iter</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>写操作无需事务直接执行，并且是批处理，主要包含 put 和 delete 操作：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Modify <span class="keyword">struct</span> &#123;</span><br><span class="line">	Data <span class="keyword">interface</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Put <span class="keyword">struct</span> &#123;</span><br><span class="line">	Key   []<span class="type">byte</span></span><br><span class="line">	Value []<span class="type">byte</span></span><br><span class="line">	Cf    <span class="type">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Delete <span class="keyword">struct</span> &#123;</span><br><span class="line">	Key []<span class="type">byte</span></span><br><span class="line">	Cf  <span class="type">string</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>遍历 batch，逐一进行 put 和 delete：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> _, b := <span class="keyword">range</span> batch &#123;</span><br><span class="line">		<span class="keyword">switch</span> b.Data.(<span class="keyword">type</span>) &#123;</span><br><span class="line">		<span class="keyword">case</span> storage.Put:</span><br><span class="line">			put := b.Data.(storage.Put)</span><br><span class="line">			<span class="keyword">if</span> err := engine_util.PutCF(s.engines.Kv, put.Cf, put.Key, put.Value); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				<span class="keyword">return</span> err</span><br><span class="line">			&#125;</span><br><span class="line">		<span class="keyword">case</span> storage.Delete:</span><br><span class="line">			del := b.Data.(storage.Delete)</span><br><span class="line">			<span class="keyword">if</span> err := engine_util.DeleteCF(s.engines.Kv, del.Cf, del.Key); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				<span class="keyword">return</span> err</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Project1B"><a href="#Project1B" class="headerlink" title="Project1B"></a>Project1B</h3><p>在 storage 基础上实现 raw API，供 project 4 使用。对于 rawGet 和 rawScan ，通过之前设计的 reader 将获得的结果组成 kvPair 回复，注意 rawScan 中定义了 limit 字段限制获得结果的数量。对于 rawPut 和 rawDelete 将操作定义成 modify 结构体接着调用 storage.Write() 执行。</p>
-<h2 id="Project2-RaftKV"><a href="#Project2-RaftKV" class="headerlink" title="Project2 RaftKV"></a>Project2 RaftKV</h2><p>在Project 1中实现了单节点的存储，在这一层，需要实现基于 raft 的kv存储。需要完成三个部分：</p>
+    <h1 id="ceph论文阅读"><a href="#ceph论文阅读" class="headerlink" title="ceph论文阅读"></a>ceph论文阅读</h1><p>论文原文 <a target="_blank" rel="noopener" href="https://www3.nd.edu/~dthain/courses/cse40771/spring2007/papers/ceph.pdf">https://www3.nd.edu/~dthain/courses/cse40771/spring2007/papers/ceph.pdf</a></p>
+<p>ceph，一种为OSD设计的分布式文件系统，目标：</p>
+<ul>
+<li>使元数据与数据管理分离，使元数据工作负载分布式处理</li>
+<li>提升系统的可扩展性</li>
+</ul>
+<h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><img src="/./ceph/arch.png" class="lazyload" data-srcset="/./ceph/arch.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"><br>ceph包含三部分：客户端接口，OSD集群和元数据集群。总体上具有以下特点：</p>
 <ol>
-<li>实现最基本的 raft 共识算法，并实现 rawnode</li>
-<li>构建容错的 kv 服务器</li>
-<li>对以上内容增加日志压缩和快照<br><img src="/./tinyKV/overview.png" class="lazyload" data-srcset="/./tinyKV/overview.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"></li>
+<li>数据与元数据解耦 客户端与元数据集群交互后无需文件列表，直接通过计算存储文件的OSD位置，然后与特定的OSD设备交互。</li>
+<li>动态分布式元数据管理 设计动态子树分区动态调整元数据集群的负载，能应对极端的工作负载</li>
+<li>自主分布式对象存储 OSD设备间能自主完成数据复制、故障处理等功能，提供客户<br>和元数据集群单一逻辑对象存储。</li>
 </ol>
-<h3 id="Project2A-Raft共识算法"><a href="#Project2A-Raft共识算法" class="headerlink" title="Project2A Raft共识算法"></a>Project2A Raft共识算法</h3><p>在 Project2A 中，仅需集中于 raft 类，log 日志结构以及raft 类上层的封装 rawnode。处理流程基本如下：</p>
-<p>暂不考虑上层应用如何处理的，上层应用将一条指令例如 put,delete,scan…封装成MsgRaftCmd 发送给对应的 peer 节点。peer 节点再将指令封装成 entry，将 entry propose 到其他的节点。通过 RaftMessage 完成传递和共识， 等待节点的 callback 。只有大部分节点接受了这个 entry 才能达成共识即 committed 。</p>
-<p>节点会调用 raft 的封装 rawnode 的接口完成共识操作。一个 rawnode 包含 raft 类以及易失的 softState，需要保存的 hardState。</p>
-<p>与 6.824 的计时不同，这里的rawnode可以视作为一个状态机，采用逻辑时钟推进，上层应用通过 Raw Node.Tick() 来推动 raft 节点的逻辑时钟，从而触发 leader 心跳和选举。</p>
-<p>上层通过 RawNode.Propose() 向 raft 节点发送新的日志条目。</p>
-<p>上层通过 RawNode.Step() 将给定的消息推进到 raft 状态机，rawNode 会进一步将消息进行处理。然后上层会通过 RawNode.HasReady() 和 RawNode.Ready() 来获取 raft 节点的更新，从而进行实际的数据操作和持久化等。</p>
-<p>通过 RawNode.Advance() 通知 RawNode 应用已经应用并保存了上次 Ready 结果中的进度。它更新内部状态，如稳定日志索引、应用日志索引等。上层应用在处理完 Ready 返回的状态后，调用此方法告知 RawNode 可以进行下一步操作。</p>
-<h4 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h4><p>在 TinyKV 中 raft 日志结构如下，与日志相关的操作需要谨慎，以免出现越界。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">snapshot/first.....applied....committed....stabled.....last</span><br><span class="line">//	--------|------------------------------------------------|</span><br><span class="line">//	                          log entries</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>raftLog 包含一个 storage 结构,用于存放自上次快照以来所有的稳定日志条目。</li>
-<li>committed 表示在大多数节点中稳定存储日志的最高位置，当所有的日志条目被大多数确认后，其索引会更新到 committed 中。</li>
-<li>applied 表示应用程序已经被指示应用到其状态机的最高日志位置。应用程序会根据 applied 的值来决定从日志中取出哪些条目进行状态更新。</li>
-<li>表示已经持久化到存储中的日志条目的最高索引。stabled 用于记录尚未被 storage 持久化的日志，每次处理 Ready 时，会包含这些不稳定的日志。</li>
-<li>entries 存放所有尚未压缩的日志条目。</li>
-<li>pendingSnapshot 存在表示正在接收的不稳定快照。</li>
-</ol>
-<p>在初始化 newLog() 时注意从 storage 中获取第一个索引和最后一个索引，由于 storage 中保存所有的已被持久化但未被应用的条目，所以 applied &#x3D; firstIndex - 1。</p>
-<h4 id="common"><a href="#common" class="headerlink" title="common"></a>common</h4><p>与 6.824 中 raft 的 RPC 调用不同，TinyKV 是通过消息队列的形式完成消息传递和操作，每一个 raft 节点均需要处理的消息类型有(仅在 project 2A 中)：</p>
-<table>
-<thead>
-<tr>
-<th>MsgType</th>
-<th>描述</th>
-<th>对应函数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>MsgHup</td>
-<td>本地消息，发起选举</td>
-<td>startElection()</td>
-</tr>
-<tr>
-<td>MsgAppend</td>
-<td>leader向其他节点同步日志的消息</td>
-<td>handleAppendEntries()</td>
-</tr>
-<tr>
-<td>MsgHeartbeat</td>
-<td>leader发送的心跳</td>
-<td>handleHeartbeat()</td>
-</tr>
-<tr>
-<td>MsgRequestVote</td>
-<td>candidate发送的投票请求</td>
-<td>handleRequestVote()</td>
-</tr>
-<tr>
-<td>MsgTimeoutNow</td>
-<td>目标节点收到该消息，即刻自增 term 发起选举</td>
-<td>startElection()</td>
-</tr>
-</tbody></table>
-<p><code>tick()</code> 函数用于推进逻辑时钟。本地消息心跳和选举通过tick()来完成。首先对于 follower 和 candidate 有 electionElapsed 来计时，每当 electionElapsed &gt;&#x3D; 随机的超时时间时需要发送 MsgHup 的本地消息触发选举。这里注意每次一个 raft 节点成为 follower 或者 candidate 都需要重新设置超时时间并保持。对于 leader 可通过 electionElapsed 定期检查是否有较多的 follower 支持(可能会出现孤岛或者网络分区的情况)，增加 heartbeatElapsed 时钟检查是否需要发送心跳。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *Raft)</span></span> tick() &#123;</span><br><span class="line">	<span class="comment">// Your Code Here (2A).</span></span><br><span class="line">	<span class="keyword">switch</span> r.State &#123;</span><br><span class="line">	<span class="keyword">case</span> StateFollower, StateCandidate:</span><br><span class="line">		r.electionElapsed++</span><br><span class="line">		<span class="keyword">if</span> r.electionElapsed &gt;= r.randomizedElectionTimeout &#123;</span><br><span class="line">			r.electionElapsed = <span class="number">0</span></span><br><span class="line">			msg := pb.Message&#123;</span><br><span class="line">				MsgType: pb.MessageType_MsgHup,</span><br><span class="line">				To:      r.id,</span><br><span class="line">				From:    r.id,</span><br><span class="line">			&#125;</span><br><span class="line">			r.Step(msg)</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">case</span> StateLeader:</span><br><span class="line">		r.electionElapsed++</span><br><span class="line">		hb := <span class="built_in">len</span>(r.resHeartBeat)</span><br><span class="line">		<span class="keyword">if</span> r.electionElapsed &gt;= r.electionTimeout &#123;</span><br><span class="line">			r.electionElapsed = <span class="number">0</span></span><br><span class="line">			r.resHeartBeat = <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="type">uint64</span>]<span class="type">bool</span>)</span><br><span class="line">			r.resHeartBeat[r.id] = <span class="literal">true</span></span><br><span class="line">			<span class="keyword">if</span> hb*<span class="number">2</span> &lt;= <span class="built_in">len</span>(r.Prs) &#123;</span><br><span class="line">				r.startElection()</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		r.heartbeatElapsed++</span><br><span class="line">		<span class="keyword">if</span> r.heartbeatElapsed &gt;= r.heartbeatTimeout &#123;</span><br><span class="line">			r.heartbeatElapsed = <span class="number">0</span></span><br><span class="line">			msg := pb.Message&#123;</span><br><span class="line">				MsgType: pb.MessageType_MsgBeat,</span><br><span class="line">				To:      r.id,</span><br><span class="line">				From:    r.id,</span><br><span class="line">			&#125;</span><br><span class="line">			r.Step(msg)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>step()</code>函数用于处理消息。根据接收到的消息类型与节点相应的状态执行相应的操作。消息分为本地消息和普通消息，对于本地消息是直接发送给本地节点的，仅需记录 to 字段和类型，直接调用 step() 函数执行即可。对于普通消息需要在to字段中记录发送的目标节点以及相关的消息存入 raft 的消息队列 r.msgs 中即可由目标节点调用 step() 完成执行。 </p>
-<p><code>startElection()</code>函数用于发起选举，选举时首先要将身份更新为 candidate，并向其余的节点发送 requestVote 消息，要在消息中记录节点最后一条日志条目的index 和 term 便于比较。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *Raft)</span></span> sendRequestVote(to <span class="type">uint64</span>) &#123;</span><br><span class="line">	lastIndex := r.RaftLog.LastIndex()</span><br><span class="line">	lastTerm, _ := r.RaftLog.Term(lastIndex)</span><br><span class="line">	msg := pb.Message&#123;</span><br><span class="line">		MsgType: pb.MessageType_MsgRequestVote,</span><br><span class="line">		To:      to,</span><br><span class="line">		From:    r.id,</span><br><span class="line">		Term:    r.Term,</span><br><span class="line">		LogTerm: lastTerm,</span><br><span class="line">		Index:   lastIndex,</span><br><span class="line">	&#125;</span><br><span class="line">	r.msgs = <span class="built_in">append</span>(r.msgs, msg)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>handleRequestVote()</code> 函数用于接收 candidate 发起的投票请求。按照论文中完成判断和更新 vote 即可。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *Raft)</span></span> handleRequestVote(m pb.Message) &#123;</span><br><span class="line">	lastIndex := r.RaftLog.LastIndex()</span><br><span class="line">	lastTerm, _ := r.RaftLog.Term(lastIndex)</span><br><span class="line">	res := pb.Message&#123;</span><br><span class="line">		MsgType: pb.MessageType_MsgRequestVoteResponse,</span><br><span class="line">		To:      m.From,</span><br><span class="line">		From:    r.id,</span><br><span class="line">		Term:    r.Term,</span><br><span class="line">		Reject:  <span class="literal">true</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> m.Term &lt; r.Term &#123;</span><br><span class="line">		r.msgs = <span class="built_in">append</span>(r.msgs, res)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> m.Term &gt; r.Term &#123;</span><br><span class="line">		r.becomeFollower(m.Term, None)</span><br><span class="line">		res.Term = r.Term</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> r.Vote == None || r.Vote == m.From &#123;</span><br><span class="line">		<span class="keyword">if</span> m.LogTerm &gt; lastTerm || (m.LogTerm == lastTerm &amp;&amp; m.Index &gt;= lastIndex) &#123;</span><br><span class="line">			r.Vote = m.From</span><br><span class="line">			res.Reject = <span class="literal">false</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	r.msgs = <span class="built_in">append</span>(r.msgs, res)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>handleAppendEntries() </code> 函数用于处理 leader 同步日志的消息。节点首先要比较 term 确认 leader 有更高的日期，接着确认 m.Index 是否低于 lastIndex ，否则拒绝消息，并发送 lastIndex 通知 leader 更新 match 和 next，然后再比较节点中 m.Index 的 term 是否一致，将不一致部分截断。 </p>
-<p>经过上面的检查后，日志的 index 和 term 是匹配的，但仍然会出现部分日志 term 不匹配的情况，这时需要将不匹配之后的日志条目截断然后追加新的日志。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *Raft)</span></span> handleAppendEntries(m pb.Message) &#123;</span><br><span class="line">	<span class="comment">// Your Code Here (2A).</span></span><br><span class="line">	<span class="keyword">if</span> m.Term &lt; r.Term &#123;</span><br><span class="line">		res := pb.Message&#123;</span><br><span class="line">			MsgType: pb.MessageType_MsgAppendResponse,</span><br><span class="line">			To:      m.From,</span><br><span class="line">			From:    r.id,</span><br><span class="line">			Term:    r.Term,</span><br><span class="line">			Reject:  <span class="literal">true</span>,</span><br><span class="line">		&#125;</span><br><span class="line">		r.msgs = <span class="built_in">append</span>(r.msgs, res)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> m.Term == r.Term &amp;&amp; r.State == StateLeader &#123;</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	r.becomeFollower(m.Term, m.From)</span><br><span class="line">	lastIndex := r.RaftLog.LastIndex()</span><br><span class="line">	lastTerm, _ := r.RaftLog.Term(lastIndex)</span><br><span class="line">	<span class="keyword">if</span> m.Index &gt; lastIndex &#123;</span><br><span class="line">		res := pb.Message&#123;</span><br><span class="line">			MsgType: pb.MessageType_MsgAppendResponse,</span><br><span class="line">			To:      m.From,</span><br><span class="line">			From:    r.id,</span><br><span class="line">			Term:    r.Term,</span><br><span class="line">			LogTerm: lastTerm,</span><br><span class="line">			Index:   lastIndex,</span><br><span class="line">			Reject:  <span class="literal">true</span>,</span><br><span class="line">		&#125;</span><br><span class="line">		r.msgs = <span class="built_in">append</span>(r.msgs, res)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	logTerm, _ := r.RaftLog.Term(m.Index)</span><br><span class="line">	<span class="keyword">if</span> m.LogTerm != logTerm &#123;</span><br><span class="line">		res := pb.Message&#123;</span><br><span class="line">			MsgType: pb.MessageType_MsgAppendResponse,</span><br><span class="line">			To:      m.From,</span><br><span class="line">			From:    r.id,</span><br><span class="line">			Term:    r.Term,</span><br><span class="line">			LogTerm: logTerm,</span><br><span class="line">			Index:   m.Index,</span><br><span class="line">			Reject:  <span class="literal">true</span>,</span><br><span class="line">		&#125;</span><br><span class="line">		r.msgs = <span class="built_in">append</span>(r.msgs, res)</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	r.RaftLog.ReplaceEntries(m.Entries)</span><br><span class="line">	newIndex := m.Index + <span class="type">uint64</span>(<span class="built_in">len</span>(m.Entries))</span><br><span class="line">	r.RaftLog.SetCommit(min(m.Commit, newIndex))</span><br><span class="line">	res := pb.Message&#123;</span><br><span class="line">		MsgType: pb.MessageType_MsgAppendResponse,</span><br><span class="line">		To:      m.From,</span><br><span class="line">		From:    r.id,</span><br><span class="line">		Term:    r.Term,</span><br><span class="line">		Index:   r.RaftLog.LastIndex(),</span><br><span class="line">		Reject:  <span class="literal">false</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	r.msgs = <span class="built_in">append</span>(r.msgs, res)</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>为何检查到不匹配后才会截断追加日志，而不是直接将 prevIndex 后的日志截断追加？</p>
-<p>考虑到如下情况：假设 index 从0开始，一个 follower 的日志为[1,1,2,2]，一个 leader 的日志为[1,1,2,2,3,3]，commitIndex &#x3D; 3，发送给这个 follower 的日志为[3,3]，prevIndex 为3，commitIndex &#x3D; 3，当这个消息由于某种原因延迟到达，此时 leader 更新为[1,1,2,2,3,3,4,4] 并获得大部分节点的支持，将 commitIndex 设置为 7。</p>
-<p>此时这个 follower 将获得[3,3,4,4]，commitIndex &#x3D; 7，追加后，此时 leader点故障，这个follower 成为 leader，接收到先前的消息[3,3]，这条消息时能经过前面两个一致性检查的，若直接截断 prevIndex ，此时节点的日志为[1,1,2,2,3,3]，这个新leader的commitIndex 将会退回5，index 大于 5 的日志全部丢失了。</p>
-<p>这并非是想要的结果，仅有日志不一致时才能截断，例如 follower 日志为[1,1,2,2,3,3,4,4],接收到prevIndex 为 3 的条目 [4,4] 或者 [2,2,3,3] 才能截断并存放。</p>
-<p>由于 raft 对日志具有一致性保证，相同任期和 index 的日志条目是一致的，可以跳过。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(l *RaftLog)</span></span> ReplaceEntries(entries []*pb.Entry) &#123;</span><br><span class="line">	<span class="keyword">for</span> _, entry := <span class="keyword">range</span> entries &#123;</span><br><span class="line">		term, _ := l.Term(entry.Index)</span><br><span class="line">		<span class="keyword">if</span> entry.Index-l.FirstIndex() &gt; <span class="type">uint64</span>(<span class="built_in">len</span>(l.entries)) || entry.Index &gt; l.LastIndex() &#123;</span><br><span class="line">			l.entries = <span class="built_in">append</span>(l.entries, *entry)</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> entry.Term != term &#123;</span><br><span class="line">			<span class="keyword">if</span> entry.Index &lt; l.FirstIndex() &#123;</span><br><span class="line">				l.entries = <span class="built_in">make</span>([]pb.Entry, <span class="number">0</span>)</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				l.entries = l.entries[:entry.Index-l.FirstIndex()]</span><br><span class="line">			&#125;</span><br><span class="line">			l.stabled = min(l.stabled, entry.Index<span class="number">-1</span>)</span><br><span class="line">			l.entries = <span class="built_in">append</span>(l.entries, *entry)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="candidate"><a href="#candidate" class="headerlink" title="candidate"></a>candidate</h4><table>
-<thead>
-<tr>
-<th>MsgType</th>
-<th>描述</th>
-<th>对应函数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>MsgRequestVoteResponse</td>
-<td>记录投票回复</td>
-<td>handleRequestResponse()</td>
-</tr>
-</tbody></table>
-<p>candidate 每次收到投票后需要重新遍历 r.votes 记录支持数和不支持数，当支持数过半时会成为 leader，反过来会退回 follower。由测试发现退回 follower 要 term 要设置为 m.Term，并且不能直接在 raft 中记录全局的投票数，测试会针对发送重复的投票回复。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *Raft)</span></span> handleRequestResponse(m pb.Message) &#123;</span><br><span class="line">	agr := <span class="number">0</span></span><br><span class="line">	dis := <span class="number">0</span></span><br><span class="line">	r.votes[m.From] = !m.Reject</span><br><span class="line">	<span class="keyword">if</span> m.Term &gt; r.Term &#123;</span><br><span class="line">		r.becomeFollower(m.Term, None)</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> _, vote := <span class="keyword">range</span> r.votes &#123;</span><br><span class="line">		<span class="keyword">if</span> vote &#123;</span><br><span class="line">			agr++</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			dis++</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> agr*<span class="number">2</span> &gt; <span class="built_in">len</span>(r.Prs) &#123;</span><br><span class="line">		r.becomeLeader()</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> dis*<span class="number">2</span> &gt;= <span class="built_in">len</span>(r.Prs) &#123;</span><br><span class="line">		r.becomeFollower(m.Term, None)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h4 id="leader"><a href="#leader" class="headerlink" title="leader"></a>leader</h4><table>
-<thead>
-<tr>
-<th>MsgType</th>
-<th>描述</th>
-<th>对应函数</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>MessageType_MsgBeat</td>
-<td>本地消息，Leader广播心跳</td>
-<td>sendHeartbeat()</td>
-</tr>
-<tr>
-<td>MsgPropose</td>
-<td>本地消息，来自上层应用的Propose请求。只有Leader实际处理</td>
-<td>handlePropose()</td>
-</tr>
-<tr>
-<td>MsgAppendResponse</td>
-<td>用于处理其他节点appendEntries和appendSnapshot的回复，leader需要据此更新match和next</td>
-<td>handleAppendResponse()</td>
-</tr>
-<tr>
-<td>MsgHeartbeatResponse</td>
-<td>心跳响应，包含当前follower的Commit索引</td>
-<td>handleHeartBeatResponse()</td>
-</tr>
-</tbody></table>
-<p>当节点成为 leader 时要完成基本的初始化，在becomeLeader()中将所有 peer 的 next 更新为 lastIndex + 1。并要上传一条当前任期的空日志，这是对应于论文中提到的 leader 只能 commit 当前 term 的日志，上传空日志后旧任期的日志就会被间接提交。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *Raft)</span></span> becomeLeader() &#123;</span><br><span class="line">	<span class="comment">// Your Code Here (2A).</span></span><br><span class="line">	<span class="comment">// <span class="doctag">NOTE:</span> Leader should propose a noop entry on its term</span></span><br><span class="line">	<span class="keyword">if</span> r.State == StateLeader &#123;</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	r.resHeartBeat = <span class="built_in">make</span>(<span class="keyword">map</span>[<span class="type">uint64</span>]<span class="type">bool</span>)</span><br><span class="line">	r.resHeartBeat[r.id] = <span class="literal">true</span></span><br><span class="line">	r.State = StateLeader</span><br><span class="line">	<span class="keyword">for</span> pr := <span class="keyword">range</span> r.Prs &#123;</span><br><span class="line">		r.Prs[pr].Next = r.RaftLog.LastIndex() + <span class="number">1</span></span><br><span class="line">		r.Prs[pr].Match = <span class="number">0</span></span><br><span class="line">	&#125;</span><br><span class="line">	entry := pb.Entry&#123;</span><br><span class="line">		EntryType: pb.EntryType_EntryNormal,</span><br><span class="line">		Term:      r.Term,</span><br><span class="line">		Index:     r.RaftLog.LastIndex() + <span class="number">1</span>,</span><br><span class="line">		Data:      <span class="literal">nil</span>,</span><br><span class="line">	&#125;</span><br><span class="line">	r.RaftLog.AppendEntry(entry)</span><br><span class="line">	r.Prs[r.id].Match = r.RaftLog.LastIndex()</span><br><span class="line">	r.Prs[r.id].Next = r.Prs[r.id].Match + <span class="number">1</span></span><br><span class="line">	<span class="keyword">for</span> pr := <span class="keyword">range</span> r.Prs &#123;</span><br><span class="line">		<span class="keyword">if</span> pr != r.id &#123;</span><br><span class="line">			r.sendAppend(pr)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>handleAppendResponse 快速回退看 6.824 那部分，基本一样的。。。</p>
-<p>很重要的问题，leader 何时更新 committed ，更新后的索引该如何告知 follower? </p>
-<p>有很多测试针对 committed 的更新，leader 在接收到 appendResponse 后会检查是否更新 committed，leader 更新 committed 为大部分节点都存在的idnex。更新后才能将 committed 通知给其他的 follower，此时需要再发送一个 appendEntries 更新 follower 的 committed。</p>
-<p>处理心跳时发现 follower 的 committed 落后也是需要及时更新的，但是不能直接更新因为此时的 follower 并没有同步最新的 entry。leader 需要再发送 appendEntries 完成日志同步并更新committed。</p>
-<p>还有特殊情况，有些测试针对单一节点，在 becomeLeader() 和 Propose() 中要立即尝试更新 committed，否则这个节点将无法更新 committed。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *Raft)</span></span> handleHeartBeatResponse(m pb.Message) &#123;</span><br><span class="line">	<span class="keyword">if</span> r.Term &lt; m.Term &#123;</span><br><span class="line">		<span class="keyword">if</span> r.State != StateFollower &#123;</span><br><span class="line">			r.becomeFollower(m.Term, None)</span><br><span class="line">			<span class="keyword">return</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	r.resHeartBeat[m.From] = <span class="literal">true</span></span><br><span class="line">	<span class="keyword">if</span> m.Commit &lt; r.RaftLog.committed &amp;&amp; r.State == StateLeader &#123; <span class="comment">// 更新commit</span></span><br><span class="line">		r.sendAppend(m.From) </span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(r *Raft)</span></span> handleAppendResponse(m pb.Message) &#123;</span><br><span class="line">	<span class="keyword">if</span> m.Reject &#123;</span><br><span class="line">		...</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		<span class="keyword">if</span> m.Index &gt; r.Prs[m.From].Match &#123;</span><br><span class="line">			r.Prs[m.From].Match = m.Index</span><br><span class="line">		&#125;</span><br><span class="line">		r.Prs[m.From].Next = r.Prs[m.From].Match + <span class="number">1</span></span><br><span class="line">		<span class="keyword">if</span> r.updateCommit() &#123; <span class="comment">// 更新commit</span></span><br><span class="line">			<span class="keyword">for</span> pr := <span class="keyword">range</span> r.Prs &#123;</span><br><span class="line">				<span class="keyword">if</span> pr != r.id &#123;</span><br><span class="line">					r.sendAppend(pr)</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>关于 2a 中很多测试细节会让人感到烦躁并思考是否有必要，但这一切会保证在后续的多线程测试中对 raft 少改点。。。</p>
-<h4 id="rawnode"><a href="#rawnode" class="headerlink" title="rawnode"></a>rawnode</h4><p>rawnode 先前提过，上层应用会通过 ready 结构来进行日志应用和持久化等操作。</p>
-<p>首先看 ready 结构体：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Ready <span class="keyword">struct</span> &#123;</span><br><span class="line"></span><br><span class="line">	*SoftState <span class="comment">// 节点当前的易失状态，当 softState 为 nil 时说明没有更新</span></span><br><span class="line"></span><br><span class="line">	pb.HardState <span class="comment">// 在消息发送前需要保存的状态，没有更新时是空的</span></span><br><span class="line"></span><br><span class="line">	Entries []pb.Entry <span class="comment">// 未持久化的条目，即 stable 后的日志条目</span></span><br><span class="line"></span><br><span class="line">	Snapshot pb.Snapshot <span class="comment">// 需要应用的日志</span></span><br><span class="line"></span><br><span class="line">	CommittedEntries []pb.Entry <span class="comment">// 已经提交但没有应用到状态机的日志条目</span></span><br><span class="line"></span><br><span class="line">	Messages []pb.Message <span class="comment">// raft 节点需要转发的消息</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>上层应用检查 ready 是否有更新，对于 softState 和 hardState 需要记录旧的状态进行对比，需要在 rawnode 中记录旧状态，而其余部分只要出现就需要更新。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(rn *RawNode)</span></span> HasReady() <span class="type">bool</span> &#123;</span><br><span class="line">	<span class="comment">// Your Code Here (2A).</span></span><br><span class="line">	hardState := rn.Raft.hardState()</span><br><span class="line">	softState := rn.Raft.softState()</span><br><span class="line">	<span class="keyword">if</span> !IsEmptyHardState(hardState) &amp;&amp; !isHardStateEqual(hardState, rn.oldHard) &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> !softState.isSoftStateEqual(rn.oldSoft) ||</span><br><span class="line">		!IsEmptySnap(rn.Raft.RaftLog.pendingSnapshot) ||</span><br><span class="line">		<span class="built_in">len</span>(rn.Raft.msgs) &gt; <span class="number">0</span> ||</span><br><span class="line">		<span class="built_in">len</span>(rn.Raft.RaftLog.unstableEntries()) &gt; <span class="number">0</span> ||</span><br><span class="line">		<span class="built_in">len</span>(rn.Raft.RaftLog.nextEnts()) &gt; <span class="number">0</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>将在 project2b 中进一步理解上层是如何通过 ready 来应用新状态的。上层节点对 ready 进行应用和持久化，反过来 rawnode 就要更新状态，将 stabled 和 applied 更新。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(rn *RawNode)</span></span> Advance(rd Ready) &#123;</span><br><span class="line">	<span class="comment">// Your Code Here (2A).</span></span><br><span class="line">	<span class="keyword">if</span> !IsEmptyHardState(rd.HardState) &#123;</span><br><span class="line">		rn.oldHard = rd.HardState</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(rd.Entries) &gt; <span class="number">0</span> &#123;</span><br><span class="line">		rn.Raft.RaftLog.stabled = rd.Entries[<span class="built_in">len</span>(rd.Entries)<span class="number">-1</span>].Index</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(rd.CommittedEntries) &gt; <span class="number">0</span> &#123;</span><br><span class="line">		rn.Raft.RaftLog.applied = rd.CommittedEntries[<span class="built_in">len</span>(rd.CommittedEntries)<span class="number">-1</span>].Index</span><br><span class="line">	&#125;</span><br><span class="line">	rn.Raft.RaftLog.pendingSnapshot = <span class="literal">nil</span></span><br><span class="line">	rn.Raft.msgs = <span class="literal">nil</span></span><br><span class="line">	rn.Raft.RaftLog.maybeCompact()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>SoftState 和 HardState 为何要记录这些内容？</p>
-<p>存入 SoftState 的内容反映了当下服务器节点的身份和 leader，仅供上层判断是否有内容更新，当服务点故障重启时先前的状态不应当恢复，RaftState 为 follower，Lead 为 None。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> SoftState <span class="keyword">struct</span> &#123;</span><br><span class="line">	Lead      <span class="type">uint64</span></span><br><span class="line">	RaftState StateType</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>存入 hardState 内的状态是需要持久化的，对于 term，重启的节点能明确自己所处的选举轮次，leader 在网络隔离后无法 commit 日志，其余的节点故障重启会投票产生一个较小 term （例如 term 1）的 leader 并 commit term 1 的日志，然后较高 term 的 leader 回归后发生混乱。<br>对于 vote，防止选举期间的混乱，在一个任期内一个节点故障之后恢复，触发了两次投票。<br>对于 commit，记录了当前节点已经提交的日志条目的索引值。持久化 commit 能让节点在重启后知道哪些日志已经被成功提交到状态机，便于进一步同步。由于 raft 日志具有幂等性，仅需记录 commit 日志位置即可。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> HardState <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="type">uint64</span> term</span><br><span class="line">	<span class="type">uint64</span> vote</span><br><span class="line">	<span class="type">uint64</span> commit</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>似乎写不完 project2b 和 project2c 的总结了，这两才是最复杂的部分，留到下一篇日志吧。。。</p>
+<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><h3 id="客户端访问"><a href="#客户端访问" class="headerlink" title="客户端访问"></a>客户端访问</h3><p>ceph的客户端接口可以直接链接存储系统或FUSE访问，每个客户端维护缓存。<br>客户端打开文件时会向MDS发送请求，然后获得索引节点号、条带化信息、映射信息，以及文件权限。<br>对象名称就是索引节点+条带号组成。无需查询文件列表，客户端即可通过CRUSH算法计算对象的主OSD和副本。然后客户端直接向OSD读写数据。</p>
+<p>条带化使客户端并行读写提升性能。ceph的条带化我个人理解就是数据分片，不是存入不同的磁盘而是存入不同的OSD中。对象会在不同的OSD中复制(实际是以多个对象组成的PG)，条带与对象之间独立，对象复制后条带也会复制。<br><img src="/./ceph/strip.png" class="lazyload" data-srcset="/./ceph/strip.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"><br>客户端读写可以授予缓冲读和缓冲写。关闭后收回权限并且MDS更新元数据。</p>
+<h3 id="客户端同步"><a href="#客户端同步" class="headerlink" title="客户端同步"></a>客户端同步</h3><p>当多个客户端并行访问同一文件MDS将撤销缓冲读写的权限，强制客户端实现POSIX一致性：读操作可以反映之前写操作，写操作是原子性的。有读写的应用都会被阻塞直到被OSD确认，OSD实现更新序列化和一致性。</p>
+<p>为了提升高性能计算的性能，ceph可以为一些自行管理一致性的程序放宽一致性，在读写时可选择缓冲或缓存，而不用同步操作；提供了 lazyio_propagate 和 lazyio_synchronize 两个函数，方便应用在需要时手动同步数据，以此在保证基本读写语义的同时，满足分布式应用对性能的需求。</p>
+<h3 id="namespace"><a href="#namespace" class="headerlink" title="namespace"></a>namespace</h3><p>涉及文件系统命名空间的交互，MDS管理使其序列化和一致，无需锁或者租约机制避免回调带来的性能损失。</p>
+<p>为提升性能，ceph对于先readdir再对每个文件stat这种常见的访问方式放宽一致性，readir后执行stat会返回短暂缓存的信息。</p>
+<p>对于多个客户端写入时的stat操作，MDS暂停客户端更新然后统计最新的文件元数据，回复后再返回写权限，确保一定可串行化。</p>
+<h2 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h2><h3 id="元数据存储"><a href="#元数据存储" class="headerlink" title="元数据存储"></a>元数据存储</h3><p>元数据在MDS的内存中缓存，以日志形式更新到ODS的存储中，且日志是幂等更新的。当一个节点故障时，另一个节点能扫描日志恢复故障节点的缓存恢复文件系统状态。</p>
+<p>ceph的元数据工作负载具有目录局部性，ceph的文件inode嵌入到目录文件中，索引节点按范围分配给OSD，单次的OSD设备文件读取能预取整个目录。对于硬链接的索引节点，ceph使用辅助锚点表进行寻址。</p>
+<h3 id="动态子树分区"><a href="#动态子树分区" class="headerlink" title="动态子树分区"></a>动态子树分区</h3><p><img src="/./ceph/mds.png" class="lazyload" data-srcset="/./ceph/mds.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"><br>ceph中元数据缓存是主副本策略管理，对于管理元数据缓存的分配(就是分配MDS节点管理哪部分的元数据)，静态子树分区无法适应元数据的动态工作负载，哈希方法降低了元数据的局部性。</p>
+<p>ceph使用动态子树分区分配，在文件的目录树，MDS使用计数器来衡量目录层次中元数据的负载。任何操作都会使受影响的索引节点及其一直到根目录的所有父节点的计数器递增。MDS的工作负载会定期进行比较，迁移部分文件子树保持工作负载的动态分配。</p>
+<p>迁移或复制时文件索引会由一致性的要求分为三部分，文件安全信息，文件信息和不可变信息，文件安全信息和文件信息需要锁，有不同的转换规则。</p>
+<h3 id="工作负载"><a href="#工作负载" class="headerlink" title="工作负载"></a>工作负载</h3><p>对于频繁访问区域的工作负载，ceph将区域复制给多个MDS平衡负载，对于热点或突发的工作负载，ceph会将目录下的文件按文件名进行哈希分配，牺牲局部性实现负载的均衡。</p>
+<p>对于客户端的负载均衡，客户端可以从MDS中获得其需要的元数据分区情况，客户端能访问访问热度最低的MDS。对于热点的元数据，客户端能得知元数据分配到不同MDS中，将客户端的负载分散。</p>
+<h2 id="RADOS"><a href="#RADOS" class="headerlink" title="RADOS"></a>RADOS</h2><h3 id="CRUSH对象分布和定位"><a href="#CRUSH对象分布和定位" class="headerlink" title="CRUSH对象分布和定位"></a>CRUSH对象分布和定位</h3><p>ceph在底层设计了可靠自主分布式对象存储(RADOS)，文件对象的复制、集群扩展、故障检测恢复等功能由OSD完成。对象先使用哈希函数分配到不同的PG中，通过位掩码控制PG中对象的数量。再用CRUSH哈希算法将PG分配给OSD。定位一个对象无需建立对象的列表，按照以上流程通过PG映射和OSD集群映射图即可计算一个对象主副本OSD位置。</p>
+<p><img src="/./ceph/rados.png" class="lazyload" data-srcset="/./ceph/rados.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"></p>
+<p>这张图描述了文件条带化对象、对象到OSD存储的过程。文件条带化为对象后，根据索引节点号ino+对象编号生成对象全局唯一的编号oid，然后对象掩码+哈希分配到PG中，每个PG通过crush算法分到多个OSD存储中复制。</p>
+<p>集群映射图就是OSD的逻辑或物理架构。CRUSH算法使PG分配到不在一个机房的OSD中复制。集群映射图还包含非正常工作OSD列表，更新用纪元号标识，OSD之间会共享增量式的映射图更新。</p>
+<h3 id="对象复制"><a href="#对象复制" class="headerlink" title="对象复制"></a>对象复制</h3><p><img src="/./ceph/repicate.png" class="lazyload" data-srcset="/./ceph/repicate.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="图片未显示"><br>前面提到ceph按照PG进行主副本复制。复制在OSD之间完成，第一个OSD作为主设备接收到PG后分配一个version，复制的过程类似于2pc，在每个副本OSD应用了更新并向主OSD做出响应之后，主OSD会在本地应用该更新，然后向客户端确认写入操作已完成。客户端在收到主OSD的确认前会缓冲写入操作。</p>
+<h3 id="故障检测"><a href="#故障检测" class="headerlink" title="故障检测"></a>故障检测</h3><p>RADOS中OSD间会自主检查故障，磁盘错误等故障单个OSD能自主检测，OSD在网络上无法访问的故障需要监测。每个OSD监控与其共享的PG复制的OSD状态，可以通过上述的复制消息或者ping监控。如果一个OSD出现以下情况可以认为故障：</p>
+<ul>
+<li>该设备在网络上是否可访问</li>
+<li>该设备是否被CRUSH算法分配PG</li>
+</ul>
+<p>故障的OSD如果为主设备，则其权限交给下一个副本OSD，设备没有恢复，则在映射图中标记并加入新的设备复制内容。客户端未完成的操作redo给新的主设备即可。</p>
+<h3 id="数据恢复和集群更新"><a href="#数据恢复和集群更新" class="headerlink" title="数据恢复和集群更新"></a>数据恢复和集群更新</h3><p>OSD集群映射图会由于故障或新节点加入发生变更，实现快速恢复，每个OSD为每个对象维护版本号，为每个PG维护近期变更日志。当活动OSD接收到更新的集群映射时，会遍历本地存储的所有归置组，通过计算 CRUSH 映射来确定自己作为主设备或从设备所负责的归置组。新运行的OSD需要与PG中其余的OSD进行对等通信。</p>
+<p>在一个PG中，OSD会向主OSD提供OSD版本号，而主OSD汇集所有的PG版本号后，若主OSD缺少最新PG状态，会从PG内当前或之前的OSD获取PG近期变更日志，更新最新的PG内容。然后主OSD向副OSD发送更新。</p>
+<h3 id="OSD本地文件系统"><a href="#OSD本地文件系统" class="headerlink" title="OSD本地文件系统"></a>OSD本地文件系统</h3><p>这里文中解释OSD本地为何不适用ext3而是EBOFS。ext3文件系统无法判断一个对象的更新何时commit，ext3是一个日志系统，同步写入和日志记录能提供安全性但带来极大的性能损失。每个OSD在用户空间中使用EBOFS存储，与原始块设备直接交互。基于以下原因：</p>
+<ul>
+<li>能自主定义所需的底层存储操作，将更新和提交分离</li>
+<li>支持原子事务，并且在内存缓存更新就会返回，并异步通知</li>
+<li>在用户空间更灵活，无需与Linux的虚拟文件系统和页缓存交互</li>
+<li>更积极写入磁盘，后续的更新也会取消过时未完成的IO操作，调度效率高</li>
+<li>基于B树，数据紧凑，能快速找到空闲空间</li>
+</ul>
 
   </div>
   
@@ -2738,10 +2558,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-05-31T16:15:08+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-04-30T15:50:28+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2025年5月31日</p>
+    <p>更新于：2025年4月30日</p>
   </a>
 </div>
 
@@ -2749,10 +2569,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/TinyKV/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>TinyKV</p></a></div>
-  <span hidden itemprop="keywords">TinyKV</span>
-
 
         
       
@@ -2764,8 +2580,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wizardtot.github.io/2025/02/23/TinyKV%E4%B8%AD%E5%9C%BA%E6%80%BB%E7%BB%931/&title=TinyKV project 1 and project 2A - 缺省的梦境&summary=这是 TinyKV 的 project 1 和 project 2 总结贴，细致的线性测试很友好
-可能有些模糊的地方，当然这些是给自己复习看的"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://wizardtot.github.io/2025/04/28/ceph%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/&title= - 缺省的梦境&summary="
           
           >
           
@@ -2777,8 +2592,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://wizardtot.github.io/2025/02/23/TinyKV%E4%B8%AD%E5%9C%BA%E6%80%BB%E7%BB%931/&title=TinyKV project 1 and project 2A - 缺省的梦境&summary=这是 TinyKV 的 project 1 和 project 2 总结贴，细致的线性测试很友好
-可能有些模糊的地方，当然这些是给自己复习看的"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://wizardtot.github.io/2025/04/28/ceph%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/&title= - 缺省的梦境&summary="
           
           >
           
@@ -2790,8 +2604,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://wizardtot.github.io/2025/02/23/TinyKV%E4%B8%AD%E5%9C%BA%E6%80%BB%E7%BB%931/&title=TinyKV project 1 and project 2A - 缺省的梦境&summary=这是 TinyKV 的 project 1 和 project 2 总结贴，细致的线性测试很友好
-可能有些模糊的地方，当然这些是给自己复习看的"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://wizardtot.github.io/2025/04/28/ceph%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/&title= - 缺省的梦境&summary="
           
           >
           
@@ -2824,21 +2637,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2025/02/27/TinyKV%E4%B8%AD%E5%9C%BA%E6%80%BB%E7%BB%932/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>TinyKV project 2b and project 2c</p>
-          <p class='content'>这是 TinyKV 的 project 2b 和 project 2c 总结贴，思绪似乎有些乱，以后再改改吧
-
-
-fault-tolerant kv storage serviceTinyKV ...</p>
-        </a>
       
-      
-        <a class='next' href='/2025/01/18/raft%E6%80%BB%E7%BB%93/'>
-          <p class='title'>raft 总结<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>这是 MIT6.824 课程 raft 论文阅读以及 lab2 总结贴
-
-
-论文总结论文原文：http://nil.csail.mit.edu/6.824/2022/papers/raft-ex...</p>
+        <a class='next' href='/2025/03/08/dp/'>
+          <p class='title'>2025年4月28日<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>常规思路下最长公共子序列（LCS）的状态转移方程对于一般的最长公共子序列问题，设两个序列分别为 $A &#x3D; [a_1, a_2, \cdots, a_m]$ 和 $B &#x3D; [b...</p>
         </a>
       
     </div>
@@ -2854,7 +2656,7 @@ fault-tolerant kv storage serviceTinyKV ...</p>
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2025/02/23/TinyKV%E4%B8%AD%E5%9C%BA%E6%80%BB%E7%BB%931/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2025/04/28/ceph%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/index.html#comments">
     </span>
     <p ct><i class='fas fa-comments'></i> 评论</p>
     
@@ -2896,7 +2698,7 @@ fault-tolerant kv storage serviceTinyKV ...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Project1-StandaloneKV"><span class="toc-text">Project1 StandaloneKV</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Column-Family"><span class="toc-text">Column Family</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Project1A"><span class="toc-text">Project1A</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Project1B"><span class="toc-text">Project1B</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Project2-RaftKV"><span class="toc-text">Project2 RaftKV</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Project2A-Raft%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95"><span class="toc-text">Project2A Raft共识算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%97%A5%E5%BF%97"><span class="toc-text">日志</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#common"><span class="toc-text">common</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#candidate"><span class="toc-text">candidate</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#leader"><span class="toc-text">leader</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rawnode"><span class="toc-text">rawnode</span></a></li></ol></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Overview"><span class="toc-text">Overview</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">客户端</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AE%BF%E9%97%AE"><span class="toc-text">客户端访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%90%8C%E6%AD%A5"><span class="toc-text">客户端同步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#namespace"><span class="toc-text">namespace</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE"><span class="toc-text">元数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8"><span class="toc-text">元数据存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%AD%90%E6%A0%91%E5%88%86%E5%8C%BA"><span class="toc-text">动态子树分区</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E8%B4%9F%E8%BD%BD"><span class="toc-text">工作负载</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RADOS"><span class="toc-text">RADOS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CRUSH%E5%AF%B9%E8%B1%A1%E5%88%86%E5%B8%83%E5%92%8C%E5%AE%9A%E4%BD%8D"><span class="toc-text">CRUSH对象分布和定位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E5%A4%8D%E5%88%B6"><span class="toc-text">对象复制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%85%E9%9A%9C%E6%A3%80%E6%B5%8B"><span class="toc-text">故障检测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E5%92%8C%E9%9B%86%E7%BE%A4%E6%9B%B4%E6%96%B0"><span class="toc-text">数据恢复和集群更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#OSD%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-text">OSD本地文件系统</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -2952,7 +2754,7 @@ fault-tolerant kv storage serviceTinyKV ...</p>
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=true;
+  pdata.ispage=false;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3433,7 +3235,7 @@ fault-tolerant kv storage serviceTinyKV ...</p>
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"缺省的梦境","url":"https://wizardtot.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://wizardtot.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://wizardtot.github.io/","name":"缺省的梦境"}},{"@type":"ListItem","position":2,"item":{"@id":"https://wizardtot.github.io/categories/TinyKV/","name":"TinyKV"}},{"@type":"ListItem","position":3,"item":{"@id":"https://wizardtot.github.io/2025/02/23/TinyKV中场总结1/","name":"TinyKV project 1 and project 2A"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"缺省的梦境","url":"https://wizardtot.github.io/","keywords":null,"description":"","author":{"@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://wizardtot.github.io/","description":""},"publisher":{"@type":"Organization","name":"缺省的梦境","url":"https://wizardtot.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://wizardtot.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"TinyKV project 1 and project 2A","description":"这是 TinyKV 的 project 1 和 project 2 总结贴，细致的线性测试很友好\n可能有些模糊的地方，当然这些是给自己复习看的","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://wizardtot.github.io/2025/02/23/TinyKV%E4%B8%AD%E5%9C%BA%E6%80%BB%E7%BB%931/"},"author":{"@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://wizardtot.github.io/"},"publisher":{"@type":"Organization","name":"缺省的梦境","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://wizardtot.github.io/2025/02/23/TinyKV%E4%B8%AD%E5%9C%BA%E6%80%BB%E7%BB%931/","wordCount":71,"datePublished":"2025-02-23T06:39:12.000Z","dateModified":"2025-05-31T08:15:08.873Z","articleSection":"TinyKV","keywords":"TinyKV","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"缺省的梦境","url":"https://wizardtot.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://wizardtot.github.io/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://wizardtot.github.io/","name":"缺省的梦境"}},{"@type":"ListItem","position":3,"item":{"@id":"https://wizardtot.github.io/2025/04/28/ceph论文阅读/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"缺省的梦境","url":"https://wizardtot.github.io/","keywords":null,"description":"","author":{"@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://wizardtot.github.io/","description":""},"publisher":{"@type":"Organization","name":"缺省的梦境","url":"https://wizardtot.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://wizardtot.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://wizardtot.github.io/2025/04/28/ceph%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"},"author":{"@type":"Person","name":"wizardTOT","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://wizardtot.github.io/"},"publisher":{"@type":"Organization","name":"缺省的梦境","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://wizardtot.github.io/2025/04/28/ceph%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/","wordCount":0,"datePublished":"2025-04-28T15:13:44.905Z","dateModified":"2025-04-30T07:50:28.491Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
