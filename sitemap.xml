@@ -2,33 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wizardtot.github.io/2025/01/17/MapReduce%E6%80%BB%E7%BB%93/</loc>
-    
-    <lastmod>2025-05-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wizardtot.github.io/2024/07/06/PA0-1/</loc>
-    
-    <lastmod>2025-05-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wizardtot.github.io/2025/01/18/raft%E6%80%BB%E7%BB%93/</loc>
-    
-    <lastmod>2025-05-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wizardtot.github.io/2025/02/27/TinyKV%E4%B8%AD%E5%9C%BA%E6%80%BB%E7%BB%932/</loc>
     
     <lastmod>2025-05-31</lastmod>
@@ -47,9 +20,36 @@
   </url>
   
   <url>
-    <loc>https://wizardtot.github.io/2025/04/28/ceph%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</loc>
+    <loc>https://wizardtot.github.io/2025/01/18/raft%E6%80%BB%E7%BB%93/</loc>
     
-    <lastmod>2025-04-30</lastmod>
+    <lastmod>2025-05-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wizardtot.github.io/2024/07/06/PA0-1/</loc>
+    
+    <lastmod>2025-05-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wizardtot.github.io/2025/01/17/MapReduce%E6%80%BB%E7%BB%93/</loc>
+    
+    <lastmod>2025-05-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wizardtot.github.io/2025/01/17/ceph%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</loc>
+    
+    <lastmod>2025-05-31</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
